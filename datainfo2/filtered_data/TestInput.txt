@@ -1,0 +1,1135 @@
+Drug A,Drug B,Cell Line Name,Score
+Fulvestrant,Vorinostat,NCI-H226,2.2222222222222223
+Vorinostat,Romidepsin,UACC-62,3.2222222222222223
+Sorafenib tosylate,Cladribine,SK-MEL-5,-5.888888888888888
+Paclitaxel,Tretinoin,MDA-MB-231/ATCC,25.66666666666667
+Quinacrine hydrochloride,Cladribine,HCT-116,-3.2222222222222223
+Everolimus,Tamoxifen citrate,MDA-MB-231/ATCC,-6.1111111111111125
+Thalidomide,Paclitaxel,HS 578T,8.666666666666666
+Mitotane,Nilotinib,SK-OV-3,-8.444444444444445
+Fulvestrant,Celecoxib,NCI-H226,-0.7777777777777778
+Thalidomide,Cladribine,SK-MEL-5,-3.555555555555556
+Thalidomide,Tretinoin,HCT-15,-6.888888888888888
+Sorafenib tosylate,Everolimus,RPMI-8226,-16.666666666666668
+Fulvestrant,Paclitaxel,UO-31,-0.8888888888888888
+Nilotinib,Tretinoin,LOX IMVI,-6.777777777777778
+Everolimus,Vorinostat,LOX IMVI,-3.2222222222222223
+Everolimus,Paclitaxel,OVCAR-3,-0.8888888888888888
+Quinacrine hydrochloride,Mitotane,UO-31,-3.111111111111111
+Sirolimus,Mitotane,HS 578T,2.4444444444444446
+Paclitaxel,Tretinoin,SF-268,19.88888888888889
+Quinacrine hydrochloride,Tamoxifen citrate,ACHN,1.1111111111111112
+Mitotane,Imatinib mesylate,T-47D,-10.333333333333334
+Vinblastine sulfate (hydrate),Romidepsin,HCT-116,4.333333333333333
+Quinacrine hydrochloride,Sirolimus,NCI-H522,-1.1111111111111112
+Quinacrine hydrochloride,Mitotane,MCF7,-1.1111111111111112
+Paclitaxel,Tretinoin,MDA-MB-468,32.55555555555556
+Quinacrine hydrochloride,Vinblastine sulfate (hydrate),EKVX,-4.777777777777779
+Quinacrine hydrochloride,Docetaxel,MCF7,-7.4444444444444455
+Fulvestrant,Cladribine,SK-MEL-5,0.7777777777777778
+Fulvestrant,Everolimus,UACC-257,0.0
+Paclitaxel,Imatinib mesylate,HL-60(TB),10.333333333333334
+Quinacrine hydrochloride,Tretinoin,CAKI-1,-21.555555555555557
+Fulvestrant,Nilotinib,HCT-15,3.333333333333333
+Docetaxel,Celecoxib,SK-MEL-5,4.4444444444444455
+Mitotane,Celecoxib,MALME-3M,-3.4444444444444446
+Quinacrine hydrochloride,Tamoxifen citrate,CAKI-1,-4.0
+Everolimus,Imatinib mesylate,A498,-8.555555555555555
+Sorafenib tosylate,Paclitaxel,HOP-62,14.666666666666664
+Mitotane,Sirolimus,IGROV1,-3.888888888888889
+Fulvestrant,Everolimus,OVCAR-8,8.777777777777779
+Vinblastine sulfate (hydrate),Romidepsin,MDA-MB-231/ATCC,-3.111111111111111
+Everolimus,Nilotinib,PC-3,-3.2222222222222223
+Mitotane,Dasatinib,PC-3,-4.777777777777779
+Fulvestrant,Sirolimus,HT29,-0.1111111111111111
+Mitotane,Imatinib mesylate,UACC-257,-6.888888888888888
+Romidepsin,Docetaxel,NCI-H322M,-5.5555555555555545
+Fulvestrant,Paclitaxel,HS 578T,-0.1111111111111111
+Fulvestrant,Nilotinib,HOP-92,-6.666666666666668
+Quinacrine hydrochloride,Tretinoin,UACC-62,-1.8888888888888888
+Vinblastine sulfate (hydrate),Sirolimus,SK-MEL-28,-4.333333333333333
+Vinblastine sulfate (hydrate),Dasatinib,U251,-6.5555555555555545
+Sirolimus,Cladribine,MDA-MB-231/ATCC,1.8888888888888888
+Dasatinib,Nilotinib,HT29,-8.555555555555555
+Everolimus,Nilotinib,NCI-H226,-6.4444444444444455
+Docetaxel,Tamoxifen citrate,IGROV1,18.33333333333333
+Gefitinib,Lenalidomide,A549/ATCC,-0.7777777777777778
+Mitotane,Paclitaxel,MDA-MB-231/ATCC,-4.111111111111111
+Nilotinib,Mitotane,OVCAR-3,-8.666666666666666
+Docetaxel,Tretinoin,A498,6.777777777777778
+Romidepsin,Paclitaxel,A498,-8.888888888888891
+Everolimus,Sirolimus,SF-539,-7.555555555555554
+Docetaxel,Celecoxib,HCT-116,11.666666666666664
+Gefitinib,Lenalidomide,OVCAR-3,-5.777777777777778
+Vorinostat,Imatinib mesylate,OVCAR-8,-7.666666666666668
+Vinblastine sulfate (hydrate),Paclitaxel,HOP-62,1.8888888888888888
+Quinacrine hydrochloride,Tamoxifen citrate,RPMI-8226,1.7777777777777777
+Vorinostat,Celecoxib,HS 578T,-1.6666666666666667
+Dasatinib,Celecoxib,NCI-H522,8.0
+Mitotane,Paclitaxel,OVCAR-8,-7.666666666666668
+Vorinostat,Imatinib mesylate,UACC-62,-27.777777777777786
+Vorinostat,Vinblastine sulfate (hydrate),MALME-3M,-10.222222222222221
+Mitotane,Imatinib mesylate,K-562,-3.7777777777777777
+Sorafenib tosylate,Dasatinib,HT29,1.2222222222222223
+Vorinostat,Nilotinib,A549/ATCC,-11.666666666666664
+Vinblastine sulfate (hydrate),Nilotinib,NCI-H322M,-3.888888888888889
+Fulvestrant,Tamoxifen citrate,KM12,-12.777777777777779
+Sorafenib tosylate,Sirolimus,UACC-257,2.888888888888889
+Vinblastine sulfate (hydrate),Celecoxib,IGROV1,-7.4444444444444455
+Vinblastine sulfate (hydrate),Romidepsin,OVCAR-4,-2.2222222222222223
+Everolimus,Paclitaxel,LOX IMVI,-11.777777777777779
+Sorafenib tosylate,Sirolimus,KM12,5.4444444444444455
+Paclitaxel,Cladribine,SK-MEL-28,-10.222222222222221
+Docetaxel,Fulvestrant,SW-620,13.777777777777779
+Vinblastine sulfate (hydrate),Vorinostat,HCT-15,-10.111111111111107
+Sorafenib tosylate,Imatinib mesylate,CAKI-1,-11.333333333333336
+Romidepsin,Paclitaxel,SK-MEL-28,1.4444444444444444
+Mitotane,Everolimus,MDA-MB-231/ATCC,7.222222222222222
+Vorinostat,Celecoxib,KM12,-0.2222222222222222
+Quinacrine hydrochloride,Paclitaxel,T-47D,-5.0
+Fulvestrant,Celecoxib,SF-539,-3.333333333333333
+Quinacrine hydrochloride,Tretinoin,HCT-15,-5.222222222222221
+Vinblastine sulfate (hydrate),Nilotinib,IGROV1,-1.7777777777777777
+Mitotane,Sirolimus,HOP-62,-10.555555555555557
+Everolimus,Cladribine,PC-3,-2.333333333333333
+Romidepsin,Docetaxel,UACC-257,2.6666666666666665
+Sorafenib tosylate,Paclitaxel,A498,23.0
+Sirolimus,Nilotinib,MDA-MB-231/ATCC,-14.555555555555555
+Vinblastine sulfate (hydrate),Sirolimus,SK-OV-3,0.4444444444444444
+Docetaxel,Paclitaxel,KM12,-3.0
+Sorafenib tosylate,Imatinib mesylate,HS 578T,-6.4444444444444455
+Quinacrine hydrochloride,Mitotane,K-562,-6.0
+Docetaxel,Tretinoin,NCI-H522,21.22222222222221
+Sorafenib tosylate,Tamoxifen citrate,BT-549,-6.666666666666668
+Paclitaxel,Imatinib mesylate,DU-145,25.0
+Dasatinib,Nilotinib,SF-268,-10.0
+Sorafenib tosylate,Imatinib mesylate,HOP-92,-13.333333333333336
+Sorafenib tosylate,Sirolimus,HOP-62,-0.6666666666666666
+Docetaxel,Nilotinib,HT29,20.22222222222221
+Fulvestrant,Tretinoin,LOX IMVI,8.11111111111111
+Tamoxifen citrate,Tretinoin,OVCAR-3,-6.4444444444444455
+Romidepsin,Paclitaxel,MDA-MB-231/ATCC,1.5555555555555556
+Vorinostat,Nilotinib,NCI-H522,-21.88888888888889
+Dasatinib,Tretinoin,MALME-3M,-0.3333333333333333
+Sorafenib tosylate,Vorinostat,HCT-116,-6.333333333333332
+Docetaxel,Cladribine,PC-3,-5.5555555555555545
+Mitotane,Paclitaxel,HOP-62,-5.4444444444444455
+Everolimus,Romidepsin,HS 578T,1.1111111111111112
+Mitotane,Tamoxifen citrate,A549/ATCC,-7.222222222222222
+Sorafenib tosylate,Tamoxifen citrate,CAKI-1,-15.777777777777779
+Paclitaxel,Tretinoin,OVCAR-4,9.555555555555557
+Vinblastine sulfate (hydrate),Celecoxib,PC-3,-1.0
+Nilotinib,Tretinoin,SF-268,-5.5555555555555545
+Quinacrine hydrochloride,Cladribine,HT29,-1.8888888888888888
+Everolimus,Tamoxifen citrate,HS 578T,1.2222222222222223
+Fulvestrant,Paclitaxel,K-562,-5.4444444444444455
+Mitotane,Dasatinib,SK-OV-3,1.6666666666666667
+Romidepsin,Imatinib mesylate,HL-60(TB),-13.888888888888893
+Fulvestrant,Cladribine,NCI-H322M,-6.5555555555555545
+Fulvestrant,Tamoxifen citrate,RPMI-8226,0.0
+Docetaxel,Sirolimus,RPMI-8226,4.5555555555555545
+Vinblastine sulfate (hydrate),Tretinoin,T-47D,-7.1111111111111125
+Nilotinib,Tamoxifen citrate,T-47D,-9.111111111111107
+Quinacrine hydrochloride,Paclitaxel,KM12,-1.6666666666666667
+Dasatinib,Sirolimus,A549/ATCC,0.2222222222222222
+Fulvestrant,Paclitaxel,CAKI-1,-6.222222222222222
+Mitotane,Paclitaxel,NCI-H460,-1.6666666666666667
+Everolimus,Nilotinib,SK-MEL-28,-41.333333333333336
+Docetaxel,Tamoxifen citrate,A549/ATCC,21.444444444444443
+Thalidomide,Cladribine,LOX IMVI,-9.0
+Thalidomide,Vinblastine sulfate (hydrate),HS 578T,4.111111111111111
+Vinblastine sulfate (hydrate),Dasatinib,HT29,-2.555555555555556
+Thalidomide,Vinblastine sulfate (hydrate),SK-MEL-28,-2.555555555555556
+Imatinib mesylate,Celecoxib,SF-268,-10.111111111111107
+Mitotane,Docetaxel,SK-MEL-5,3.4444444444444446
+Mitotane,Nilotinib,NCI-H460,-1.1111111111111112
+Paclitaxel,Imatinib mesylate,UO-31,3.555555555555556
+Quinacrine hydrochloride,Mitotane,HOP-92,-5.111111111111111
+Romidepsin,Imatinib mesylate,NCI-H322M,-32.77777777777778
+Tretinoin,Cladribine,ACHN,-1.7777777777777777
+Sorafenib tosylate,Tretinoin,T-47D,-1.6666666666666667
+Imatinib mesylate,Tretinoin,IGROV1,-4.2222222222222205
+Tamoxifen citrate,Cladribine,OVCAR-4,-2.333333333333333
+Romidepsin,Celecoxib,MDA-MB-231/ATCC,9.666666666666666
+Thalidomide,Cladribine,NCI-H23,-13.555555555555555
+Fulvestrant,Dasatinib,OVCAR-3,5.666666666666668
+Nilotinib,Cladribine,SK-OV-3,-1.0
+Docetaxel,Nilotinib,NCI-H460,8.777777777777779
+Sorafenib tosylate,Imatinib mesylate,IGROV1,-4.666666666666667
+Thalidomide,Mitotane,HOP-92,-4.2222222222222205
+Sorafenib tosylate,Dasatinib,A498,-8.333333333333334
+Vinblastine sulfate (hydrate),Nilotinib,MDA-MB-231/ATCC,-1.6666666666666667
+Mitotane,Cladribine,ACHN,3.333333333333333
+Paclitaxel,Tamoxifen citrate,OVCAR-8,22.33333333333333
+Everolimus,Tretinoin,HT29,-4.888888888888889
+Docetaxel,Nilotinib,SF-539,27.11111111111111
+Sorafenib tosylate,Cladribine,OVCAR-8,-3.7777777777777777
+Imatinib mesylate,Cladribine,MDA-MB-435,-1.6666666666666667
+Everolimus,Tamoxifen citrate,MDA-MB-468,8.333333333333334
+Fulvestrant,Sirolimus,HOP-62,-1.8888888888888888
+Mitotane,Everolimus,NCI-H226,-8.0
+Thalidomide,Vinblastine sulfate (hydrate),UACC-257,-3.333333333333333
+Vinblastine sulfate (hydrate),Romidepsin,DU-145,-4.666666666666667
+Docetaxel,Nilotinib,RPMI-8226,16.11111111111111
+Thalidomide,Docetaxel,HCT-15,-0.1111111111111111
+Romidepsin,Imatinib mesylate,NCI-H226,-1.5555555555555556
+Imatinib mesylate,Tretinoin,HT29,-4.0
+Vinblastine sulfate (hydrate),Nilotinib,UO-31,-3.555555555555556
+Sorafenib tosylate,Celecoxib,DU-145,1.4444444444444444
+Fulvestrant,Vorinostat,UACC-62,1.4444444444444444
+Romidepsin,Nilotinib,NCI-H322M,-40.888888888888886
+Quinacrine hydrochloride,Mitotane,A549/ATCC,0.7777777777777778
+Everolimus,Tamoxifen citrate,HT29,-5.4444444444444455
+Everolimus,Vorinostat,K-562,-4.888888888888889
+Thalidomide,Mitotane,HL-60(TB),-0.2222222222222222
+Nilotinib,Imatinib mesylate,K-562,-3.555555555555556
+Paclitaxel,Tretinoin,KM12,19.22222222222221
+Imatinib mesylate,Tamoxifen citrate,A498,-7.1111111111111125
+Mitotane,Everolimus,K-562,7.555555555555554
+Quinacrine hydrochloride,Paclitaxel,A498,-5.222222222222221
+Romidepsin,Tretinoin,DU-145,-3.0
+Fulvestrant,Celecoxib,OVCAR-4,-6.1111111111111125
+Everolimus,Tretinoin,SF-268,-2.6666666666666665
+Mitotane,Sirolimus,HL-60(TB),-1.1111111111111112
+Paclitaxel,Celecoxib,OVCAR-4,11.888888888888893
+Vinblastine sulfate (hydrate),Imatinib mesylate,HL-60(TB),-0.3333333333333333
+Sorafenib tosylate,Sirolimus,U251,-9.333333333333334
+Vorinostat,Vinblastine sulfate (hydrate),UO-31,0.0
+Vinblastine sulfate (hydrate),Cladribine,UO-31,-1.8888888888888888
+Dasatinib,Tamoxifen citrate,MALME-3M,-7.555555555555554
+Quinacrine hydrochloride,Sirolimus,PC-3,0.1111111111111111
+Fulvestrant,Everolimus,EKVX,-6.888888888888888
+Thalidomide,Sirolimus,U251,-1.3333333333333333
+Sirolimus,Imatinib mesylate,OVCAR-3,-10.333333333333334
+Sirolimus,Vinblastine sulfate (hydrate),NCI-H460,-0.6666666666666666
+Vinblastine sulfate (hydrate),Cladribine,HT29,-3.555555555555556
+Nilotinib,Tretinoin,OVCAR-4,-8.888888888888891
+Docetaxel,Paclitaxel,UO-31,-2.0
+Docetaxel,Imatinib mesylate,HL-60(TB),19.777777777777786
+Romidepsin,Sirolimus,DU-145,-4.4444444444444455
+Vorinostat,Docetaxel,RPMI-8226,-1.0
+Sirolimus,Imatinib mesylate,EKVX,-4.888888888888889
+Vorinostat,Cladribine,KM12,-1.4444444444444444
+Mitotane,Docetaxel,CAKI-1,2.4444444444444446
+Romidepsin,Sirolimus,UACC-62,-6.888888888888888
+Romidepsin,Paclitaxel,NCI-H226,2.1111111111111107
+Mitotane,Everolimus,UO-31,13.111111111111107
+Paclitaxel,Tretinoin,T-47D,5.666666666666668
+Vinblastine sulfate (hydrate),Imatinib mesylate,SF-268,-5.111111111111111
+Vinblastine sulfate (hydrate),Nilotinib,SW-620,0.3333333333333333
+Tamoxifen citrate,Cladribine,LOX IMVI,-2.2222222222222223
+Fulvestrant,Tamoxifen citrate,NCI-H23,-3.2222222222222223
+Dasatinib,Romidepsin,BT-549,-2.7777777777777777
+Thalidomide,Sirolimus,ACHN,-2.555555555555556
+Sorafenib tosylate,Cladribine,NCI-H322M,-19.0
+Dasatinib,Tretinoin,T-47D,-1.8888888888888888
+Fulvestrant,Everolimus,SF-268,14.666666666666664
+Vinblastine sulfate (hydrate),Cladribine,SK-OV-3,-6.888888888888888
+Vinblastine sulfate (hydrate),Imatinib mesylate,SF-295,-3.6666666666666665
+Docetaxel,Paclitaxel,OVCAR-3,-10.0
+Everolimus,Docetaxel,SF-539,7.777777777777778
+Quinacrine hydrochloride,Vinblastine sulfate (hydrate),OVCAR-3,-12.666666666666664
+Dasatinib,Nilotinib,DU-145,-11.888888888888893
+Fulvestrant,Paclitaxel,U251,-1.6666666666666667
+Thalidomide,Mitotane,MCF7,-0.7777777777777778
+Tamoxifen citrate,Celecoxib,DU-145,-2.333333333333333
+Quinacrine hydrochloride,Paclitaxel,SK-MEL-5,-12.555555555555555
+Fulvestrant,Imatinib mesylate,SK-MEL-5,-3.111111111111111
+Vinblastine sulfate (hydrate),Sirolimus,UACC-62,-0.5555555555555556
+Fulvestrant,Nilotinib,MDA-MB-231/ATCC,-6.666666666666668
+Vinblastine sulfate (hydrate),Vorinostat,HOP-92,-3.0
+Romidepsin,Imatinib mesylate,NCI-H460,1.8888888888888888
+Fulvestrant,Tamoxifen citrate,HCT-15,2.7777777777777777
+Fulvestrant,Tretinoin,NCI-H226,-0.4444444444444444
+Thalidomide,Docetaxel,SW-620,-6.4444444444444455
+Quinacrine hydrochloride,Sirolimus,U251,0.6666666666666666
+Nilotinib,Cladribine,UACC-257,-1.4444444444444444
+Sorafenib tosylate,Sirolimus,UO-31,-8.333333333333334
+Docetaxel,Celecoxib,A549/ATCC,10.444444444444443
+Vorinostat,Imatinib mesylate,A549/ATCC,-13.222222222222221
+Nilotinib,Mitotane,DU-145,-8.11111111111111
+Vorinostat,Sirolimus,MALME-3M,1.7777777777777777
+Vinblastine sulfate (hydrate),Nilotinib,MALME-3M,-6.4444444444444455
+Fulvestrant,Dasatinib,T-47D,0.4444444444444444
+Quinacrine hydrochloride,Mitotane,T-47D,1.5555555555555556
+Tretinoin,Cladribine,UO-31,-3.888888888888889
+Paclitaxel,Sirolimus,HT29,-17.11111111111111
+Sorafenib tosylate,Imatinib mesylate,MCF7,-8.555555555555555
+Vorinostat,Romidepsin,RPMI-8226,9.555555555555557
+Paclitaxel,Imatinib mesylate,HS 578T,15.333333333333336
+Dasatinib,Imatinib mesylate,HCT-116,-1.1111111111111112
+Quinacrine hydrochloride,Sirolimus,SK-MEL-28,-4.111111111111111
+Sorafenib tosylate,Celecoxib,SK-MEL-28,-2.333333333333333
+Romidepsin,Vinblastine sulfate (hydrate),IGROV1,2.888888888888889
+Romidepsin,Sirolimus,SK-MEL-5,1.7777777777777777
+Dasatinib,Romidepsin,NCI-H322M,-4.666666666666667
+Quinacrine hydrochloride,Tretinoin,SF-539,3.4444444444444446
+Mitotane,Nilotinib,T-47D,-8.444444444444445
+Vinblastine sulfate (hydrate),Tretinoin,HT29,3.0
+Vinblastine sulfate (hydrate),Vorinostat,EKVX,-3.888888888888889
+Dasatinib,Vorinostat,OVCAR-3,6.777777777777778
+Vinblastine sulfate (hydrate),Cladribine,OVCAR-3,0.1111111111111111
+Sirolimus,Tretinoin,MDA-MB-468,16.11111111111111
+Nilotinib,Imatinib mesylate,MDA-MB-468,-10.222222222222221
+Sirolimus,Vinblastine sulfate (hydrate),A498,-1.1111111111111112
+Nilotinib,Vinblastine sulfate (hydrate),SF-295,-6.666666666666668
+Everolimus,Cladribine,UACC-257,-3.555555555555556
+Fulvestrant,Imatinib mesylate,HCT-116,-3.6666666666666665
+Docetaxel,Nilotinib,SF-268,-12.777777777777779
+Fulvestrant,Imatinib mesylate,UO-31,-11.0
+Mitotane,Nilotinib,OVCAR-4,-6.333333333333332
+Fulvestrant,Romidepsin,HT29,3.555555555555556
+Nilotinib,Cladribine,SF-539,-4.2222222222222205
+Nilotinib,Cladribine,LOX IMVI,-7.222222222222222
+Mitotane,Tretinoin,BT-549,-2.888888888888889
+Tretinoin,Cladribine,HS 578T,6.666666666666668
+Sirolimus,Tamoxifen citrate,RPMI-8226,9.0
+Sorafenib tosylate,Sirolimus,ACHN,-11.0
+Dasatinib,Tretinoin,HCT-116,5.0
+Tamoxifen citrate,Tretinoin,PC-3,-3.6666666666666665
+Sirolimus,Tamoxifen citrate,A498,-5.666666666666668
+Vinblastine sulfate (hydrate),Cladribine,T-47D,-12.111111111111107
+Everolimus,Celecoxib,SW-620,-2.0
+Dasatinib,Tamoxifen citrate,PC-3,6.0
+Sirolimus,Tamoxifen citrate,KM12,-1.6666666666666667
+Tretinoin,Celecoxib,PC-3,-2.7777777777777777
+Fulvestrant,Sirolimus,NCI-H460,-2.555555555555556
+Fulvestrant,Tamoxifen citrate,UACC-257,0.3333333333333333
+Mitotane,Imatinib mesylate,EKVX,-6.5555555555555545
+Romidepsin,Celecoxib,NCI-H522,-2.7777777777777777
+Everolimus,Docetaxel,KM12,0.1111111111111111
+Quinacrine hydrochloride,Tamoxifen citrate,SK-OV-3,-1.1111111111111112
+Sirolimus,Nilotinib,ACHN,-5.333333333333333
+Quinacrine hydrochloride,Mitotane,SK-MEL-5,-1.2222222222222223
+Mitotane,Sirolimus,T-47D,-0.1111111111111111
+Fulvestrant,Sirolimus,SK-MEL-28,-3.555555555555556
+Thalidomide,Mitotane,OVCAR-4,-3.888888888888889
+Everolimus,Tamoxifen citrate,SF-268,-1.7777777777777777
+Romidepsin,Tamoxifen citrate,T-47D,2.6666666666666665
+Quinacrine hydrochloride,Tamoxifen citrate,LOX IMVI,-1.5555555555555556
+Imatinib mesylate,Celecoxib,IGROV1,-5.888888888888888
+Vorinostat,Docetaxel,IGROV1,0.0
+Tamoxifen citrate,Celecoxib,SK-MEL-5,-0.2222222222222222
+Sorafenib tosylate,Vorinostat,K-562,-15.444444444444445
+Vinblastine sulfate (hydrate),Everolimus,SF-539,-2.888888888888889
+Fulvestrant,Dasatinib,UACC-257,0.5555555555555556
+Paclitaxel,Tamoxifen citrate,PC-3,10.777777777777779
+Fulvestrant,Everolimus,OVCAR-3,13.888888888888893
+Fulvestrant,Nilotinib,NCI-H460,-1.8888888888888888
+Mitotane,Tamoxifen citrate,T-47D,-8.333333333333334
+Docetaxel,Celecoxib,DU-145,13.666666666666664
+Nilotinib,Imatinib mesylate,ACHN,-16.444444444444443
+Sorafenib tosylate,Imatinib mesylate,A549/ATCC,-8.666666666666666
+Mitotane,Dasatinib,UO-31,2.888888888888889
+Vinblastine sulfate (hydrate),Cladribine,SF-268,-5.777777777777778
+Fulvestrant,Nilotinib,OVCAR-3,1.5555555555555556
+Quinacrine hydrochloride,Tamoxifen citrate,HS 578T,-0.2222222222222222
+Vorinostat,Paclitaxel,MDA-MB-231/ATCC,-4.4444444444444455
+Quinacrine hydrochloride,Tamoxifen citrate,UACC-62,0.4444444444444444
+Sorafenib tosylate,Tamoxifen citrate,MALME-3M,-0.5555555555555556
+Thalidomide,Tretinoin,SK-MEL-28,-9.111111111111107
+Quinacrine hydrochloride,Tretinoin,ACHN,-2.1111111111111107
+Sorafenib tosylate,Celecoxib,HOP-92,-9.111111111111107
+Fulvestrant,Romidepsin,HCT-116,-0.2222222222222222
+Sorafenib tosylate,Romidepsin,SW-620,-9.111111111111107
+Romidepsin,Tretinoin,A549/ATCC,15.0
+Sirolimus,Tretinoin,OVCAR-3,-2.4444444444444446
+Mitotane,Sirolimus,EKVX,-4.111111111111111
+Sorafenib tosylate,Tretinoin,PC-3,4.888888888888889
+Everolimus,Tamoxifen citrate,BT-549,3.111111111111111
+Vinblastine sulfate (hydrate),Cladribine,SK-MEL-5,5.333333333333333
+Quinacrine hydrochloride,Tamoxifen citrate,HCT-15,-4.111111111111111
+Dasatinib,Vorinostat,A498,0.0
+Vinblastine sulfate (hydrate),Dasatinib,OVCAR-8,0.7777777777777778
+Vorinostat,Romidepsin,A498,-9.111111111111107
+Vorinostat,Sirolimus,A549/ATCC,-2.1111111111111107
+Vinblastine sulfate (hydrate),Everolimus,PC-3,3.555555555555556
+Thalidomide,Tamoxifen citrate,KM12,-2.333333333333333
+Thalidomide,Sirolimus,HCT-15,-1.5555555555555556
+Vinblastine sulfate (hydrate),Cladribine,EKVX,-4.5555555555555545
+Dasatinib,Tamoxifen citrate,OVCAR-4,2.1111111111111107
+Fulvestrant,Dasatinib,SK-MEL-28,3.6666666666666665
+Vinblastine sulfate (hydrate),Nilotinib,HOP-92,-5.888888888888888
+Tretinoin,Cladribine,NCI-H322M,-3.0
+Sorafenib tosylate,Vorinostat,MDA-MB-231/ATCC,-4.5555555555555545
+Thalidomide,Tretinoin,SK-OV-3,-3.888888888888889
+Sirolimus,Nilotinib,RPMI-8226,10.777777777777779
+Sorafenib tosylate,Docetaxel,DU-145,12.222222222222221
+Fulvestrant,Nilotinib,NCI-H23,-8.888888888888891
+Docetaxel,Celecoxib,IGROV1,8.444444444444445
+Thalidomide,Tamoxifen citrate,EKVX,-5.666666666666668
+Imatinib mesylate,Celecoxib,SK-MEL-28,-9.444444444444443
+Sirolimus,Tamoxifen citrate,HOP-92,-7.666666666666668
+Sorafenib tosylate,Tamoxifen citrate,NCI-H23,-9.0
+Vinblastine sulfate (hydrate),Romidepsin,MALME-3M,-2.333333333333333
+Thalidomide,Cladribine,NCI-H522,-1.5555555555555556
+Nilotinib,Mitotane,LOX IMVI,-4.2222222222222205
+Quinacrine hydrochloride,Docetaxel,CAKI-1,-25.0
+Fulvestrant,Celecoxib,A549/ATCC,-5.0
+Fulvestrant,Celecoxib,NCI-H522,-1.4444444444444444
+Thalidomide,Mitotane,NCI-H522,-5.333333333333333
+Vorinostat,Paclitaxel,NCI-H226,-12.222222222222221
+Vinblastine sulfate (hydrate),Tamoxifen citrate,SW-620,10.555555555555557
+Sorafenib tosylate,Vorinostat,CAKI-1,-2.555555555555556
+Paclitaxel,Cladribine,SW-620,-2.0
+Romidepsin,Celecoxib,BT-549,3.333333333333333
+Dasatinib,Tretinoin,LOX IMVI,-6.4444444444444455
+Vorinostat,Romidepsin,PC-3,-0.2222222222222222
+Tamoxifen citrate,Cladribine,BT-549,0.4444444444444444
+Quinacrine hydrochloride,Cladribine,RPMI-8226,-4.666666666666667
+Vorinostat,Docetaxel,LOX IMVI,-3.7777777777777777
+Thalidomide,Tamoxifen citrate,MDA-MB-435,-3.6666666666666665
+Vorinostat,Tamoxifen citrate,HL-60(TB),-19.555555555555557
+Sorafenib tosylate,Romidepsin,NCI-H23,-2.555555555555556
+Dasatinib,Vorinostat,OVCAR-4,-9.444444444444443
+Mitotane,Imatinib mesylate,SF-295,-1.6666666666666667
+Fulvestrant,Nilotinib,CAKI-1,-8.11111111111111
+Sorafenib tosylate,Paclitaxel,A549/ATCC,18.22222222222221
+Sirolimus,Imatinib mesylate,HOP-92,-12.222222222222221
+Mitotane,Dasatinib,T-47D,-7.4444444444444455
+Tamoxifen citrate,Celecoxib,HOP-92,-3.7777777777777777
+Fulvestrant,Tamoxifen citrate,U251,-0.6666666666666666
+Thalidomide,Tamoxifen citrate,ACHN,-2.4444444444444446
+Paclitaxel,Imatinib mesylate,KM12,14.555555555555555
+Everolimus,Imatinib mesylate,SW-620,-6.4444444444444455
+Dasatinib,Romidepsin,MALME-3M,-2.333333333333333
+Docetaxel,Vinblastine sulfate (hydrate),MALME-3M,-7.4444444444444455
+Fulvestrant,Nilotinib,SF-539,1.2222222222222223
+Imatinib mesylate,Tamoxifen citrate,NCI-H322M,-1.7777777777777777
+Sorafenib tosylate,Tretinoin,NCI-H226,12.666666666666664
+Sorafenib tosylate,Paclitaxel,MALME-3M,9.777777777777779
+Sirolimus,Tretinoin,K-562,4.777777777777779
+Sorafenib tosylate,Docetaxel,UACC-62,18.777777777777786
+Mitotane,Docetaxel,UO-31,-4.777777777777779
+Vinblastine sulfate (hydrate),Everolimus,LOX IMVI,-8.888888888888891
+Dasatinib,Romidepsin,MDA-MB-468,-1.3333333333333333
+Fulvestrant,Dasatinib,HOP-92,-4.2222222222222205
+Tamoxifen citrate,Tretinoin,UACC-257,-2.888888888888889
+Everolimus,Tretinoin,NCI-H522,-2.555555555555556
+Nilotinib,Vinblastine sulfate (hydrate),HL-60(TB),3.6666666666666665
+Sorafenib tosylate,Imatinib mesylate,U251,-10.666666666666666
+Sirolimus,Mitotane,OVCAR-3,-7.666666666666668
+Mitotane,Cladribine,HOP-62,-2.2222222222222223
+Mitotane,Tretinoin,EKVX,3.6666666666666665
+Thalidomide,Tamoxifen citrate,NCI-H23,-2.4444444444444446
+Quinacrine hydrochloride,Cladribine,UACC-257,-9.222222222222221
+Vinblastine sulfate (hydrate),Tamoxifen citrate,PC-3,8.666666666666666
+Thalidomide,Paclitaxel,SW-620,-1.7777777777777777
+Everolimus,Docetaxel,SW-620,2.555555555555556
+Romidepsin,Celecoxib,OVCAR-8,-1.0
+Everolimus,Nilotinib,UACC-257,-11.888888888888893
+Thalidomide,Sirolimus,SF-268,-2.4444444444444446
+Vorinostat,Nilotinib,NCI-H322M,-29.555555555555557
+Nilotinib,Celecoxib,OVCAR-4,-4.5555555555555545
+Sirolimus,Nilotinib,HL-60(TB),-15.777777777777779
+Cladribine,Celecoxib,OVCAR-4,-4.888888888888889
+Quinacrine hydrochloride,Sirolimus,NCI-H322M,-3.2222222222222223
+Quinacrine hydrochloride,Sirolimus,NCI-H226,3.2222222222222223
+Mitotane,Paclitaxel,UACC-62,0.4444444444444444
+Everolimus,Paclitaxel,HT29,9.111111111111107
+Nilotinib,Cladribine,PC-3,-2.6666666666666665
+Vinblastine sulfate (hydrate),Paclitaxel,OVCAR-4,-1.7777777777777777
+Fulvestrant,Sirolimus,NCI-H23,-5.111111111111111
+Tretinoin,Cladribine,NCI-H522,-0.5555555555555556
+Fulvestrant,Everolimus,SK-MEL-28,19.555555555555557
+Sirolimus,Tamoxifen citrate,T-47D,1.6666666666666667
+Tretinoin,Celecoxib,OVCAR-4,1.4444444444444444
+Imatinib mesylate,Tamoxifen citrate,MDA-MB-468,-2.888888888888889
+Vorinostat,Imatinib mesylate,SW-620,-12.555555555555555
+Docetaxel,Paclitaxel,NCI-H322M,-22.555555555555557
+Sirolimus,Cladribine,MCF7,-8.666666666666666
+Vorinostat,Cladribine,NCI-H522,-1.2222222222222223
+Vinblastine sulfate (hydrate),Sirolimus,K-562,-1.4444444444444444
+Quinacrine hydrochloride,Docetaxel,SF-268,-0.8888888888888888
+Docetaxel,Vinblastine sulfate (hydrate),A549/ATCC,-3.0
+Everolimus,Docetaxel,UACC-62,5.5555555555555545
+Quinacrine hydrochloride,Vinblastine sulfate (hydrate),MALME-3M,-1.1111111111111112
+Mitotane,Docetaxel,OVCAR-3,11.333333333333336
+Fulvestrant,Vorinostat,SF-268,-1.2222222222222223
+Nilotinib,Cladribine,HL-60(TB),-9.555555555555557
+Mitotane,Tretinoin,HCT-116,3.555555555555556
+Vinblastine sulfate (hydrate),Tretinoin,SF-268,3.555555555555556
+Vinblastine sulfate (hydrate),Everolimus,SF-268,-5.0
+Fulvestrant,Tretinoin,A498,-1.6666666666666667
+Vorinostat,Celecoxib,RPMI-8226,-7.888888888888887
+Mitotane,Docetaxel,EKVX,-4.5555555555555545
+Dasatinib,Romidepsin,A498,-3.555555555555556
+Quinacrine hydrochloride,Vinblastine sulfate (hydrate),BT-549,1.6666666666666667
+Sirolimus,Celecoxib,PC-3,7.222222222222222
+Sorafenib tosylate,Cladribine,A549/ATCC,-6.1111111111111125
+Quinacrine hydrochloride,Tretinoin,HOP-92,-6.1111111111111125
+Vinblastine sulfate (hydrate),Tamoxifen citrate,MDA-MB-435,22.66666666666667
+Sirolimus,Celecoxib,ACHN,5.0
+Tretinoin,Cladribine,A498,-8.0
+Romidepsin,Tretinoin,IGROV1,3.4444444444444446
+Fulvestrant,Tamoxifen citrate,NCI-H460,-0.1111111111111111
+Vinblastine sulfate (hydrate),Tamoxifen citrate,CAKI-1,12.777777777777779
+Fulvestrant,Tretinoin,HOP-92,-4.777777777777779
+Mitotane,Tretinoin,OVCAR-8,-1.5555555555555556
+Vorinostat,Sirolimus,IGROV1,-4.4444444444444455
+Sorafenib tosylate,Cladribine,SF-295,-5.4444444444444455
+Vorinostat,Cladribine,SF-268,-9.777777777777779
+Mitotane,Paclitaxel,KM12,0.0
+Thalidomide,Tretinoin,CAKI-1,4.2222222222222205
+Docetaxel,Sirolimus,HT29,10.444444444444443
+Dasatinib,Nilotinib,LOX IMVI,-10.222222222222221
+Everolimus,Dasatinib,PC-3,-1.4444444444444444
+Tretinoin,Celecoxib,NCI-H226,2.4444444444444446
+Dasatinib,Imatinib mesylate,KM12,-6.888888888888888
+Gefitinib,Lenalidomide,SK-OV-3,-1.8888888888888888
+Sorafenib tosylate,Tamoxifen citrate,SF-295,-2.4444444444444446
+Vinblastine sulfate (hydrate),Romidepsin,SF-268,-3.2222222222222223
+Fulvestrant,Dasatinib,DU-145,-1.4444444444444444
+Quinacrine hydrochloride,Cladribine,MALME-3M,-7.555555555555554
+Dasatinib,Cladribine,PC-3,-3.0
+Sorafenib tosylate,Dasatinib,HOP-62,-6.0
+Quinacrine hydrochloride,Cladribine,NCI-H23,-2.4444444444444446
+Romidepsin,Imatinib mesylate,OVCAR-8,3.333333333333333
+Fulvestrant,Dasatinib,MALME-3M,-1.2222222222222223
+Vinblastine sulfate (hydrate),Vorinostat,PC-3,1.0
+Fulvestrant,Tretinoin,HCT-116,5.0
+Vinblastine sulfate (hydrate),Vorinostat,HT29,-4.111111111111111
+Quinacrine hydrochloride,Vinblastine sulfate (hydrate),NCI-H23,-5.888888888888888
+Docetaxel,Imatinib mesylate,SF-539,25.777777777777786
+Fulvestrant,Dasatinib,A549/ATCC,7.1111111111111125
+Thalidomide,Docetaxel,SF-268,2.2222222222222223
+Paclitaxel,Celecoxib,NCI-H322M,-3.6666666666666665
+Quinacrine hydrochloride,Cladribine,MDA-MB-468,-7.666666666666668
+Sirolimus,Celecoxib,RPMI-8226,5.222222222222221
+Sorafenib tosylate,Imatinib mesylate,SK-MEL-28,-2.555555555555556
+Docetaxel,Imatinib mesylate,RPMI-8226,30.44444444444445
+Fulvestrant,Tretinoin,U251,0.3333333333333333
+Paclitaxel,Tretinoin,IGROV1,13.555555555555555
+Vorinostat,Sirolimus,KM12,-4.2222222222222205
+Fulvestrant,Dasatinib,U251,-4.111111111111111
+Sirolimus,Tretinoin,SK-OV-3,4.5555555555555545
+Tamoxifen citrate,Celecoxib,IGROV1,-1.8888888888888888
+Thalidomide,Sirolimus,SF-295,-1.8888888888888888
+Romidepsin,Vinblastine sulfate (hydrate),UO-31,-1.3333333333333333
+Vorinostat,Romidepsin,NCI-H322M,4.111111111111111
+Romidepsin,Cladribine,IGROV1,-3.4444444444444446
+Dasatinib,Tamoxifen citrate,UO-31,9.222222222222221
+Paclitaxel,Tamoxifen citrate,SF-539,40.66666666666666
+Everolimus,Docetaxel,LOX IMVI,0.5555555555555556
+Quinacrine hydrochloride,Tretinoin,A549/ATCC,-3.555555555555556
+Mitotane,Paclitaxel,UACC-257,-10.444444444444443
+Fulvestrant,Tamoxifen citrate,HS 578T,7.888888888888887
+Tretinoin,Cladribine,UACC-257,-1.8888888888888888
+Fulvestrant,Vorinostat,CAKI-1,-4.333333333333333
+Dasatinib,Tamoxifen citrate,HT29,7.1111111111111125
+Fulvestrant,Tretinoin,NCI-H322M,1.4444444444444444
+Dasatinib,Tamoxifen citrate,DU-145,-5.777777777777778
+Vinblastine sulfate (hydrate),Nilotinib,OVCAR-4,-0.7777777777777778
+Vorinostat,Romidepsin,NCI-H522,2.4444444444444446
+Thalidomide,Vinblastine sulfate (hydrate),UACC-62,0.2222222222222222
+Vinblastine sulfate (hydrate),Vorinostat,UACC-257,0.6666666666666666
+Tamoxifen citrate,Celecoxib,KM12,-3.6666666666666665
+Everolimus,Tretinoin,KM12,-10.0
+Paclitaxel,Imatinib mesylate,A498,8.11111111111111
+Nilotinib,Vinblastine sulfate (hydrate),MDA-MB-468,-9.444444444444443
+Sirolimus,Imatinib mesylate,NCI-H23,-8.555555555555555
+Quinacrine hydrochloride,Paclitaxel,SF-295,5.4444444444444455
+Mitotane,Sirolimus,DU-145,-5.777777777777778
+Paclitaxel,Sirolimus,IGROV1,5.5555555555555545
+Nilotinib,Mitotane,MALME-3M,-2.2222222222222223
+Nilotinib,Tamoxifen citrate,MDA-MB-231/ATCC,-14.333333333333336
+Sorafenib tosylate,Tretinoin,U251,3.333333333333333
+Mitotane,Cladribine,HS 578T,-2.7777777777777777
+Fulvestrant,Tretinoin,MALME-3M,1.4444444444444444
+Vinblastine sulfate (hydrate),Paclitaxel,UO-31,-2.1111111111111107
+Mitotane,Imatinib mesylate,SK-MEL-28,-5.333333333333333
+Thalidomide,Cladribine,MCF7,-7.888888888888887
+Docetaxel,Sirolimus,HCT-116,1.5555555555555556
+Sirolimus,Vinblastine sulfate (hydrate),MDA-MB-468,-1.4444444444444444
+Tretinoin,Cladribine,HOP-62,-2.2222222222222223
+Nilotinib,Vinblastine sulfate (hydrate),LOX IMVI,-2.888888888888889
+Paclitaxel,Celecoxib,K-562,28.44444444444445
+Dasatinib,Nilotinib,OVCAR-4,-4.2222222222222205
+Paclitaxel,Cladribine,A498,-2.6666666666666665
+Nilotinib,Vinblastine sulfate (hydrate),MCF7,-0.5555555555555556
+Dasatinib,Docetaxel,HT29,1.5555555555555556
+Fulvestrant,Tretinoin,CAKI-1,-2.7777777777777777
+Vinblastine sulfate (hydrate),Vorinostat,HOP-62,0.1111111111111111
+Romidepsin,Imatinib mesylate,UO-31,1.4444444444444444
+Tamoxifen citrate,Celecoxib,ACHN,-5.888888888888888
+Mitotane,Sirolimus,OVCAR-4,-2.2222222222222223
+Vorinostat,Docetaxel,NCI-H522,0.8888888888888888
+Sorafenib tosylate,Tamoxifen citrate,SK-MEL-5,-13.0
+Paclitaxel,Imatinib mesylate,K-562,18.666666666666668
+Thalidomide,Tretinoin,OVCAR-8,-3.4444444444444446
+Fulvestrant,Romidepsin,MDA-MB-231/ATCC,6.5555555555555545
+Everolimus,Docetaxel,UACC-257,0.8888888888888888
+Mitotane,Dasatinib,KM12,-1.4444444444444444
+Docetaxel,Tamoxifen citrate,SF-268,18.33333333333333
+Vinblastine sulfate (hydrate),Everolimus,MDA-MB-231/ATCC,-4.4444444444444455
+Quinacrine hydrochloride,Paclitaxel,HCT-116,-0.4444444444444444
+Romidepsin,Tretinoin,UO-31,-1.8888888888888888
+Dasatinib,Tretinoin,U251,-4.888888888888889
+Sirolimus,Tamoxifen citrate,HS 578T,-2.555555555555556
+Dasatinib,Paclitaxel,A498,3.0
+Vorinostat,Nilotinib,BT-549,-11.666666666666664
+Sorafenib tosylate,Dasatinib,DU-145,-1.6666666666666667
+Docetaxel,Vinblastine sulfate (hydrate),HS 578T,3.333333333333333
+Vorinostat,Sirolimus,UACC-62,-12.555555555555555
+Vinblastine sulfate (hydrate),Tamoxifen citrate,KM12,7.888888888888887
+Tamoxifen citrate,Cladribine,UACC-62,1.6666666666666667
+Vinblastine sulfate (hydrate),Celecoxib,SF-295,-8.333333333333334
+Vorinostat,Tamoxifen citrate,IGROV1,5.111111111111111
+Quinacrine hydrochloride,Docetaxel,NCI-H522,-12.444444444444445
+Docetaxel,Imatinib mesylate,KM12,23.33333333333333
+Everolimus,Romidepsin,A498,-0.6666666666666666
+Tretinoin,Cladribine,MDA-MB-435,1.8888888888888888
+Vinblastine sulfate (hydrate),Nilotinib,MDA-MB-468,-1.2222222222222223
+Dasatinib,Tretinoin,KM12,-6.0
+Vorinostat,Vinblastine sulfate (hydrate),BT-549,-2.555555555555556
+Dasatinib,Sirolimus,K-562,11.888888888888893
+Docetaxel,Nilotinib,NCI-H226,1.5555555555555556
+Thalidomide,Tretinoin,BT-549,-9.666666666666666
+Sorafenib tosylate,Vorinostat,SK-MEL-5,-5.888888888888888
+Dasatinib,Nilotinib,SK-MEL-28,-24.11111111111111
+Everolimus,Cladribine,U251,-5.4444444444444455
+Paclitaxel,Imatinib mesylate,NCI-H226,6.1111111111111125
+Vinblastine sulfate (hydrate),Romidepsin,PC-3,0.0
+Vinblastine sulfate (hydrate),Vorinostat,SW-620,-1.7777777777777777
+Imatinib mesylate,Cladribine,KM12,-9.0
+Nilotinib,Mitotane,NCI-H23,-8.333333333333334
+Quinacrine hydrochloride,Paclitaxel,HOP-92,-7.1111111111111125
+Everolimus,Tretinoin,HS 578T,2.555555555555556
+Vorinostat,Romidepsin,OVCAR-3,-2.0
+Fulvestrant,Nilotinib,MDA-MB-468,-4.111111111111111
+Fulvestrant,Cladribine,SF-295,-5.666666666666668
+Fulvestrant,Everolimus,HOP-92,-3.7777777777777777
+Docetaxel,Imatinib mesylate,HT29,26.33333333333333
+Vorinostat,Tamoxifen citrate,UACC-257,-3.0
+Quinacrine hydrochloride,Mitotane,SF-295,-4.777777777777779
+Cladribine,Celecoxib,UACC-257,-2.4444444444444446
+Mitotane,Imatinib mesylate,NCI-H23,2.4444444444444446
+Nilotinib,Vinblastine sulfate (hydrate),NCI-H226,-0.4444444444444444
+Nilotinib,Cladribine,HOP-92,0.3333333333333333
+Fulvestrant,Dasatinib,SK-MEL-5,-4.666666666666667
+Quinacrine hydrochloride,Sirolimus,SF-295,-7.0
+Sirolimus,Cladribine,A549/ATCC,-6.1111111111111125
+Paclitaxel,Nilotinib,MALME-3M,-12.555555555555555
+Romidepsin,Tretinoin,SW-620,-5.888888888888888
+Romidepsin,Tretinoin,MDA-MB-468,-1.2222222222222223
+Vorinostat,Tamoxifen citrate,SF-268,-18.22222222222221
+Fulvestrant,Dasatinib,HT29,7.777777777777778
+Cladribine,Celecoxib,RPMI-8226,-5.5555555555555545
+Mitotane,Cladribine,U251,-3.2222222222222223
+Nilotinib,Cladribine,NCI-H226,-1.3333333333333333
+Vorinostat,Imatinib mesylate,DU-145,-13.555555555555555
+Quinacrine hydrochloride,Vinblastine sulfate (hydrate),HL-60(TB),-3.111111111111111
+Dasatinib,Docetaxel,T-47D,5.5555555555555545
+Vinblastine sulfate (hydrate),Tretinoin,SF-295,-1.0
+Everolimus,Cladribine,MDA-MB-231/ATCC,-2.6666666666666665
+Quinacrine hydrochloride,Docetaxel,SF-295,4.888888888888889
+Everolimus,Tamoxifen citrate,UO-31,14.111111111111107
+Thalidomide,Docetaxel,CAKI-1,-11.444444444444445
+Dasatinib,Paclitaxel,IGROV1,3.4444444444444446
+Fulvestrant,Tretinoin,BT-549,1.6666666666666667
+Dasatinib,Cladribine,MCF7,-1.2222222222222223
+Mitotane,Nilotinib,UACC-62,1.4444444444444444
+Sorafenib tosylate,Tamoxifen citrate,HCT-116,-3.111111111111111
+Vorinostat,Vinblastine sulfate (hydrate),KM12,-0.8888888888888888
+Sorafenib tosylate,Paclitaxel,MCF7,14.111111111111107
+Everolimus,Sirolimus,NCI-H322M,0.7777777777777778
+Paclitaxel,Cladribine,MDA-MB-468,8.333333333333334
+Quinacrine hydrochloride,Tamoxifen citrate,IGROV1,-3.333333333333333
+Cladribine,Celecoxib,EKVX,-10.666666666666666
+Thalidomide,Paclitaxel,KM12,-8.777777777777779
+Thalidomide,Vinblastine sulfate (hydrate),SF-268,7.1111111111111125
+Romidepsin,Nilotinib,RPMI-8226,-0.1111111111111111
+Sirolimus,Tretinoin,ACHN,5.888888888888888
+Thalidomide,Mitotane,ACHN,-1.7777777777777777
+Romidepsin,Tretinoin,OVCAR-3,-2.888888888888889
+Dasatinib,Tamoxifen citrate,NCI-H460,-1.2222222222222223
+Vorinostat,Vinblastine sulfate (hydrate),HS 578T,0.8888888888888888
+Vinblastine sulfate (hydrate),Sirolimus,KM12,-6.222222222222222
+Paclitaxel,Sirolimus,OVCAR-3,13.333333333333336
+Fulvestrant,Dasatinib,NCI-H226,0.2222222222222222
+Vinblastine sulfate (hydrate),Romidepsin,HOP-62,5.222222222222221
+Mitotane,Imatinib mesylate,DU-145,-5.0
+Vinblastine sulfate (hydrate),Romidepsin,EKVX,-4.333333333333333
+Vorinostat,Cladribine,OVCAR-8,-1.4444444444444444
+Tretinoin,Cladribine,KM12,-3.555555555555556
+Paclitaxel,Sirolimus,MDA-MB-468,1.5555555555555556
+Nilotinib,Vinblastine sulfate (hydrate),ACHN,-5.0
+Paclitaxel,Celecoxib,MDA-MB-468,27.88888888888889
+Imatinib mesylate,Cladribine,RPMI-8226,1.5555555555555556
+Mitotane,Dasatinib,NCI-H23,-2.555555555555556
+Mitotane,Docetaxel,BT-549,-2.7777777777777777
+Sirolimus,Tretinoin,NCI-H322M,7.0
+Sorafenib tosylate,Tretinoin,HS 578T,7.555555555555554
+Fulvestrant,Sirolimus,SF-295,-2.333333333333333
+Romidepsin,Docetaxel,UACC-62,-5.888888888888888
+Vinblastine sulfate (hydrate),Tretinoin,UACC-257,8.555555555555555
+Dasatinib,Tretinoin,A549/ATCC,4.5555555555555545
+Romidepsin,Tamoxifen citrate,NCI-H226,4.2222222222222205
+Mitotane,Tretinoin,U251,-3.4444444444444446
+Everolimus,Imatinib mesylate,NCI-H522,-6.666666666666668
+Sirolimus,Celecoxib,K-562,4.777777777777779
+Sorafenib tosylate,Tamoxifen citrate,OVCAR-3,-0.8888888888888888
+Mitotane,Nilotinib,A549/ATCC,-3.0
+Everolimus,Cladribine,MALME-3M,-1.0
+Fulvestrant,Sirolimus,UACC-257,-4.0
+Vorinostat,Celecoxib,HL-60(TB),-36.444444444444436
+Docetaxel,Imatinib mesylate,MDA-MB-231/ATCC,1.5555555555555556
+Sirolimus,Celecoxib,MDA-MB-468,20.11111111111111
+Fulvestrant,Dasatinib,BT-549,-2.555555555555556
+Romidepsin,Paclitaxel,UACC-257,3.111111111111111
+Quinacrine hydrochloride,Tamoxifen citrate,PC-3,-1.4444444444444444
+Mitotane,Cladribine,A549/ATCC,-13.0
+Dasatinib,Docetaxel,DU-145,-3.555555555555556
+Sorafenib tosylate,Paclitaxel,ACHN,-0.4444444444444444
+Romidepsin,Tamoxifen citrate,LOX IMVI,-5.888888888888888
+Vorinostat,Imatinib mesylate,HCT-116,-16.555555555555557
+Sorafenib tosylate,Paclitaxel,T-47D,16.0
+Nilotinib,Tamoxifen citrate,HCT-116,-3.0
+Romidepsin,Vinblastine sulfate (hydrate),T-47D,-12.222222222222221
+Nilotinib,Vinblastine sulfate (hydrate),A498,-0.4444444444444444
+Sorafenib tosylate,Nilotinib,ACHN,-8.0
+Paclitaxel,Tamoxifen citrate,HT29,30.0
+Fulvestrant,Cladribine,A549/ATCC,-3.555555555555556
+Dasatinib,Nilotinib,KM12,-0.7777777777777778
+Vinblastine sulfate (hydrate),Everolimus,MCF7,-3.6666666666666665
+Romidepsin,Tamoxifen citrate,IGROV1,6.333333333333332
+Thalidomide,Vinblastine sulfate (hydrate),MDA-MB-468,1.4444444444444444
+Quinacrine hydrochloride,Tretinoin,MCF7,-7.888888888888887
+Vorinostat,Celecoxib,T-47D,-7.333333333333332
+Tamoxifen citrate,Tretinoin,ACHN,4.777777777777779
+Everolimus,Tretinoin,SK-MEL-28,-8.222222222222221
+Tamoxifen citrate,Tretinoin,MDA-MB-468,2.333333333333333
+Everolimus,Paclitaxel,HCT-15,-5.777777777777778
+Everolimus,Sirolimus,NCI-H460,-3.6666666666666665
+Everolimus,Docetaxel,K-562,3.0
+Sorafenib tosylate,Dasatinib,SK-OV-3,0.2222222222222222
+Vinblastine sulfate (hydrate),Dasatinib,SF-295,-1.0
+Vinblastine sulfate (hydrate),Vorinostat,MCF7,0.1111111111111111
+Docetaxel,Paclitaxel,HCT-116,-4.111111111111111
+Paclitaxel,Sirolimus,PC-3,5.5555555555555545
+Quinacrine hydrochloride,Cladribine,SF-539,-10.888888888888893
+Fulvestrant,Nilotinib,SW-620,-3.333333333333333
+Paclitaxel,Sirolimus,HS 578T,0.8888888888888888
+Thalidomide,Sirolimus,NCI-H322M,-2.1111111111111107
+Mitotane,Dasatinib,A549/ATCC,-3.0
+Mitotane,Tretinoin,MDA-MB-231/ATCC,0.3333333333333333
+Vinblastine sulfate (hydrate),Sirolimus,MALME-3M,-9.777777777777779
+Quinacrine hydrochloride,Tamoxifen citrate,MDA-MB-435,-0.7777777777777778
+Quinacrine hydrochloride,Docetaxel,NCI-H322M,-1.6666666666666667
+Mitotane,Celecoxib,HS 578T,-3.6666666666666665
+Sorafenib tosylate,Sirolimus,SF-539,-2.555555555555556
+Vinblastine sulfate (hydrate),Paclitaxel,A549/ATCC,-4.5555555555555545
+Nilotinib,Mitotane,SF-268,-0.8888888888888888
+Dasatinib,Imatinib mesylate,MDA-MB-231/ATCC,-5.0
+Thalidomide,Tamoxifen citrate,BT-549,-2.1111111111111107
+Imatinib mesylate,Cladribine,NCI-H226,-1.8888888888888888
+Docetaxel,Imatinib mesylate,T-47D,10.555555555555557
+Sorafenib tosylate,Docetaxel,OVCAR-3,14.888888888888893
+Mitotane,Imatinib mesylate,MDA-MB-468,-1.7777777777777777
+Sorafenib tosylate,Docetaxel,MDA-MB-231/ATCC,12.444444444444445
+Sirolimus,Tretinoin,SF-539,1.2222222222222223
+Mitotane,Dasatinib,NCI-H522,0.1111111111111111
+Tretinoin,Cladribine,NCI-H460,-5.888888888888888
+Romidepsin,Cladribine,HS 578T,5.222222222222221
+Dasatinib,Imatinib mesylate,SF-268,-1.8888888888888888
+Fulvestrant,Imatinib mesylate,ACHN,-8.444444444444445
+Nilotinib,Tretinoin,SF-539,-0.8888888888888888
+Sorafenib tosylate,Docetaxel,K-562,12.555555555555555
+Vorinostat,Tretinoin,IGROV1,-1.8888888888888888
+Docetaxel,Celecoxib,OVCAR-3,19.444444444444443
+Sirolimus,Nilotinib,OVCAR-3,2.6666666666666665
+Thalidomide,Docetaxel,SK-OV-3,-8.11111111111111
+Mitotane,Everolimus,T-47D,-7.888888888888887
+Thalidomide,Mitotane,DU-145,-7.333333333333332
+Everolimus,Docetaxel,T-47D,-9.888888888888893
+Sirolimus,Tamoxifen citrate,MALME-3M,10.222222222222221
+Mitotane,Everolimus,UACC-257,-5.5555555555555545
+Vinblastine sulfate (hydrate),Paclitaxel,UACC-62,0.7777777777777778
+Nilotinib,Cladribine,SF-295,-12.555555555555555
+Nilotinib,Mitotane,HS 578T,-7.333333333333332
+Mitotane,Tamoxifen citrate,U251,1.5555555555555556
+Quinacrine hydrochloride,Mitotane,UACC-257,3.555555555555556
+Vorinostat,Romidepsin,KM12,0.6666666666666666
+Dasatinib,Docetaxel,HS 578T,-1.0
+Sirolimus,Tamoxifen citrate,NCI-H522,-6.4444444444444455
+Quinacrine hydrochloride,Sirolimus,UACC-62,2.1111111111111107
+Docetaxel,Tretinoin,T-47D,12.777777777777779
+Nilotinib,Vinblastine sulfate (hydrate),K-562,-16.555555555555557
+Mitotane,Imatinib mesylate,SF-268,-5.222222222222221
+Nilotinib,Celecoxib,DU-145,-7.333333333333332
+Docetaxel,Paclitaxel,NCI-H226,-2.333333333333333
+Nilotinib,Tamoxifen citrate,PC-3,-5.777777777777778
+Vorinostat,Nilotinib,PC-3,-16.666666666666668
+Cladribine,Celecoxib,MDA-MB-435,-1.8888888888888888
+Vinblastine sulfate (hydrate),Romidepsin,SK-MEL-28,7.0
+Imatinib mesylate,Celecoxib,NCI-H460,-1.4444444444444444
+Mitotane,Dasatinib,MALME-3M,-0.1111111111111111
+Sorafenib tosylate,Docetaxel,MCF7,1.1111111111111112
+Fulvestrant,Romidepsin,SK-MEL-5,10.333333333333334
+Fulvestrant,Celecoxib,HCT-15,-8.0
+Sirolimus,Nilotinib,SK-OV-3,3.111111111111111
+Sorafenib tosylate,Romidepsin,MDA-MB-435,-0.8888888888888888
+Dasatinib,Paclitaxel,HT29,-8.888888888888891
+Romidepsin,Tretinoin,LOX IMVI,-5.333333333333333
+Sorafenib tosylate,Vorinostat,SF-268,0.4444444444444444
+Thalidomide,Tamoxifen citrate,SF-268,-5.333333333333333
+Dasatinib,Tretinoin,HL-60(TB),3.4444444444444446
+Vinblastine sulfate (hydrate),Tretinoin,NCI-H226,7.555555555555554
+Sorafenib tosylate,Nilotinib,SF-539,-8.777777777777779
+Romidepsin,Paclitaxel,NCI-H460,-2.888888888888889
+Dasatinib,Imatinib mesylate,HS 578T,16.333333333333332
+Dasatinib,Sirolimus,UACC-257,-6.1111111111111125
+Fulvestrant,Tamoxifen citrate,NCI-H322M,0.8888888888888888
+Vorinostat,Tretinoin,HS 578T,2.2222222222222223
+Fulvestrant,Cladribine,SF-268,-2.2222222222222223
+Quinacrine hydrochloride,Vinblastine sulfate (hydrate),MDA-MB-435,-10.333333333333334
+Vorinostat,Docetaxel,SF-539,-2.888888888888889
+Vorinostat,Tretinoin,OVCAR-4,-2.333333333333333
+Dasatinib,Celecoxib,MDA-MB-468,-2.888888888888889
+Quinacrine hydrochloride,Tamoxifen citrate,T-47D,0.7777777777777778
+Vinblastine sulfate (hydrate),Celecoxib,A498,-2.888888888888889
+Mitotane,Celecoxib,MDA-MB-231/ATCC,0.8888888888888888
+Sorafenib tosylate,Docetaxel,ACHN,8.11111111111111
+Thalidomide,Cladribine,SK-MEL-28,-1.2222222222222223
+Vinblastine sulfate (hydrate),Celecoxib,MALME-3M,-6.666666666666668
+Thalidomide,Paclitaxel,SK-OV-3,-0.1111111111111111
+Docetaxel,Fulvestrant,KM12,19.33333333333333
+Tretinoin,Cladribine,SK-OV-3,-2.333333333333333
+Sorafenib tosylate,Romidepsin,U251,-0.2222222222222222
+Mitotane,Imatinib mesylate,RPMI-8226,-12.555555555555555
+Tamoxifen citrate,Celecoxib,MDA-MB-231/ATCC,5.4444444444444455
+Fulvestrant,Sirolimus,MDA-MB-468,-2.6666666666666665
+Everolimus,Celecoxib,SK-MEL-28,-21.0
+Fulvestrant,Dasatinib,SW-620,-1.7777777777777777
+Nilotinib,Cladribine,KM12,-3.333333333333333
+Vinblastine sulfate (hydrate),Paclitaxel,K-562,0.6666666666666666
+Vinblastine sulfate (hydrate),Paclitaxel,NCI-H322M,0.7777777777777778
+Mitotane,Celecoxib,SK-MEL-5,-5.888888888888888
+Fulvestrant,Celecoxib,OVCAR-3,-3.4444444444444446
+Docetaxel,Celecoxib,BT-549,15.444444444444445
+Vorinostat,Romidepsin,T-47D,-1.7777777777777777
+Romidepsin,Imatinib mesylate,MDA-MB-231/ATCC,-1.4444444444444444
+Sirolimus,Tretinoin,RPMI-8226,15.222222222222221
+Vorinostat,Vinblastine sulfate (hydrate),UACC-62,-14.888888888888893
+Everolimus,Celecoxib,PC-3,4.888888888888889
+Everolimus,Tretinoin,SF-539,-9.222222222222221
+Tretinoin,Cladribine,NCI-H23,0.2222222222222222
+Vinblastine sulfate (hydrate),Tretinoin,HCT-116,0.0
+Vorinostat,Celecoxib,MALME-3M,-7.1111111111111125
+Vinblastine sulfate (hydrate),Vorinostat,KM12,0.6666666666666666
+Vorinostat,Romidepsin,MALME-3M,7.333333333333332
+Everolimus,Paclitaxel,U251,3.111111111111111
+Dasatinib,Imatinib mesylate,BT-549,-4.333333333333333
+Mitotane,Docetaxel,SW-620,5.4444444444444455
+Fulvestrant,Cladribine,KM12,1.0
+Docetaxel,Cladribine,MALME-3M,-7.0
+Mitotane,Imatinib mesylate,U251,-9.444444444444443
+Vinblastine sulfate (hydrate),Dasatinib,MDA-MB-435,-1.4444444444444444
+Romidepsin,Paclitaxel,RPMI-8226,-4.0
+Dasatinib,Tretinoin,UO-31,5.5555555555555545
+Nilotinib,Cladribine,IGROV1,-6.0
+Vorinostat,Celecoxib,NCI-H460,-6.4444444444444455
+Docetaxel,Celecoxib,HS 578T,20.88888888888889
+Tretinoin,Celecoxib,DU-145,-14.333333333333336
+Quinacrine hydrochloride,Vinblastine sulfate (hydrate),K-562,-8.11111111111111
+Fulvestrant,Imatinib mesylate,SW-620,-8.0
+Thalidomide,Tretinoin,SF-295,-6.5555555555555545
+Dasatinib,Romidepsin,HS 578T,-8.888888888888891
+Thalidomide,Cladribine,MDA-MB-468,-0.5555555555555556
+Sorafenib tosylate,Romidepsin,BT-549,-3.2222222222222223
+Imatinib mesylate,Cladribine,OVCAR-3,1.4444444444444444
+Gefitinib,Lenalidomide,T-47D,-1.0
+Sorafenib tosylate,Cladribine,MDA-MB-435,-3.7777777777777777
+Vinblastine sulfate (hydrate),Dasatinib,NCI-H23,3.0
+Vorinostat,Tretinoin,SK-MEL-5,-6.5555555555555545
+Quinacrine hydrochloride,Mitotane,HL-60(TB),-2.6666666666666665
+Nilotinib,Tretinoin,RPMI-8226,2.7777777777777777
+Romidepsin,Paclitaxel,OVCAR-3,-8.11111111111111
+Vorinostat,Tretinoin,RPMI-8226,14.444444444444445
+Sirolimus,Imatinib mesylate,NCI-H460,-4.5555555555555545
+Sorafenib tosylate,Celecoxib,CAKI-1,-15.444444444444445
+Vorinostat,Tretinoin,UO-31,-1.5555555555555556
+Vinblastine sulfate (hydrate),Tretinoin,SK-MEL-5,9.0
+Everolimus,Docetaxel,OVCAR-3,-4.777777777777779
+Sorafenib tosylate,Tamoxifen citrate,NCI-H460,-0.8888888888888888
+Vinblastine sulfate (hydrate),Vorinostat,T-47D,-5.111111111111111
+Fulvestrant,Tretinoin,DU-145,7.555555555555554
+Nilotinib,Cladribine,T-47D,-5.777777777777778
+Quinacrine hydrochloride,Vinblastine sulfate (hydrate),PC-3,0.1111111111111111
+Docetaxel,Fulvestrant,PC-3,-3.2222222222222223
+Fulvestrant,Romidepsin,CAKI-1,2.0
+Imatinib mesylate,Celecoxib,RPMI-8226,-7.222222222222222
+Fulvestrant,Sirolimus,T-47D,2.888888888888889
+Docetaxel,Vinblastine sulfate (hydrate),RPMI-8226,-2.0
+Docetaxel,Nilotinib,HL-60(TB),19.555555555555557
+Mitotane,Sirolimus,MDA-MB-468,-5.333333333333333
+Romidepsin,Imatinib mesylate,KM12,2.333333333333333
+Fulvestrant,Dasatinib,NCI-H522,-1.3333333333333333
+Fulvestrant,Paclitaxel,UACC-257,-2.555555555555556
+Fulvestrant,Romidepsin,MDA-MB-468,-2.555555555555556
+Romidepsin,Celecoxib,UACC-62,-1.3333333333333333
+Vinblastine sulfate (hydrate),Imatinib mesylate,BT-549,-2.2222222222222223
+Romidepsin,Paclitaxel,OVCAR-4,-4.2222222222222205
+Dasatinib,Sirolimus,A498,4.888888888888889
+Tretinoin,Celecoxib,T-47D,0.2222222222222222
+Sorafenib tosylate,Paclitaxel,LOX IMVI,17.444444444444443
+Fulvestrant,Paclitaxel,NCI-H522,-0.2222222222222222
+Paclitaxel,Sirolimus,NCI-H522,0.6666666666666666
+Fulvestrant,Nilotinib,OVCAR-8,-3.555555555555556
+Vorinostat,Imatinib mesylate,LOX IMVI,0.1111111111111111
+Vinblastine sulfate (hydrate),Everolimus,SK-MEL-5,1.2222222222222223
+Quinacrine hydrochloride,Docetaxel,HOP-62,-7.1111111111111125
+Fulvestrant,Celecoxib,DU-145,-16.333333333333332
+Sorafenib tosylate,Nilotinib,KM12,-8.555555555555555
+Everolimus,Celecoxib,IGROV1,-1.6666666666666667
+Romidepsin,Imatinib mesylate,T-47D,-15.222222222222221
+Dasatinib,Tamoxifen citrate,U251,-12.555555555555555
+Sorafenib tosylate,Vorinostat,OVCAR-3,-12.0
+Nilotinib,Tamoxifen citrate,NCI-H522,-3.0
+Paclitaxel,Nilotinib,T-47D,-21.11111111111111
+Tretinoin,Celecoxib,HS 578T,9.333333333333334
+Sorafenib tosylate,Romidepsin,NCI-H226,0.7777777777777778
+Sorafenib tosylate,Everolimus,HOP-62,-11.111111111111107
+Mitotane,Everolimus,OVCAR-8,8.222222222222221
+Everolimus,Nilotinib,A498,-2.333333333333333
+Mitotane,Sirolimus,HCT-15,-6.1111111111111125
+Cladribine,Celecoxib,KM12,-5.666666666666668
+Sorafenib tosylate,Celecoxib,SF-295,-1.0
+Tamoxifen citrate,Tretinoin,OVCAR-4,-3.0
+Vinblastine sulfate (hydrate),Imatinib mesylate,DU-145,-5.0
+Vinblastine sulfate (hydrate),Nilotinib,U251,-2.0
+Docetaxel,Tretinoin,OVCAR-4,11.444444444444445
+Quinacrine hydrochloride,Cladribine,CAKI-1,-6.333333333333332
+Nilotinib,Celecoxib,KM12,-5.4444444444444455
+Quinacrine hydrochloride,Tretinoin,UO-31,-6.333333333333332
+Dasatinib,Romidepsin,KM12,-5.333333333333333
+Imatinib mesylate,Tamoxifen citrate,MALME-3M,2.6666666666666665
+Fulvestrant,Sirolimus,NCI-H522,-2.4444444444444446
+Nilotinib,Celecoxib,LOX IMVI,-1.4444444444444444
+Paclitaxel,Sirolimus,SW-620,1.7777777777777777
+Dasatinib,Cladribine,NCI-H226,-3.555555555555556
+Sorafenib tosylate,Docetaxel,IGROV1,3.0
+Tamoxifen citrate,Celecoxib,NCI-H23,-1.2222222222222223
+Sorafenib tosylate,Cladribine,BT-549,-4.666666666666667
+Quinacrine hydrochloride,Tamoxifen citrate,MCF7,-1.4444444444444444
+Fulvestrant,Romidepsin,NCI-H226,-5.111111111111111
+Vinblastine sulfate (hydrate),Everolimus,BT-549,-2.888888888888889
+Mitotane,Tamoxifen citrate,NCI-H226,-4.4444444444444455
+Fulvestrant,Cladribine,BT-549,-3.111111111111111
+Romidepsin,Celecoxib,NCI-H460,1.4444444444444444
+Paclitaxel,Tamoxifen citrate,NCI-H226,16.88888888888889
+Nilotinib,Celecoxib,SF-295,-8.777777777777779
+Fulvestrant,Nilotinib,DU-145,-1.1111111111111112
+Quinacrine hydrochloride,Paclitaxel,K-562,5.111111111111111
+Romidepsin,Vinblastine sulfate (hydrate),OVCAR-3,-1.7777777777777777
+Paclitaxel,Nilotinib,DU-145,12.333333333333336
+Fulvestrant,Everolimus,IGROV1,31.11111111111111
+Sorafenib tosylate,Tretinoin,HOP-62,1.8888888888888888
+Sorafenib tosylate,Cladribine,OVCAR-3,-3.4444444444444446
+Mitotane,Docetaxel,HOP-92,-10.222222222222221
+Romidepsin,Tamoxifen citrate,DU-145,-2.555555555555556
+Nilotinib,Celecoxib,UACC-257,-2.0
+Quinacrine hydrochloride,Tamoxifen citrate,MALME-3M,-0.6666666666666666
+Docetaxel,Nilotinib,IGROV1,2.6666666666666665
+Quinacrine hydrochloride,Mitotane,ACHN,0.1111111111111111
+Tretinoin,Cladribine,U251,2.888888888888889
+Fulvestrant,Cladribine,IGROV1,-1.6666666666666667
+Vorinostat,Tamoxifen citrate,KM12,-4.2222222222222205
+Everolimus,Docetaxel,NCI-H322M,-1.8888888888888888
+Mitotane,Sirolimus,SF-268,-1.1111111111111112
+Docetaxel,Fulvestrant,SF-268,-6.1111111111111125
+Mitotane,Nilotinib,DU-145,0.2222222222222222
+Quinacrine hydrochloride,Vinblastine sulfate (hydrate),CAKI-1,-27.222222222222207
+Sirolimus,Mitotane,NCI-H23,3.4444444444444446
+Vinblastine sulfate (hydrate),Imatinib mesylate,A549/ATCC,-2.4444444444444446
+Everolimus,Dasatinib,MCF7,-5.222222222222221
+Paclitaxel,Cladribine,HCT-116,-4.4444444444444455
+Sorafenib tosylate,Paclitaxel,NCI-H226,4.888888888888889
+Sorafenib tosylate,Docetaxel,HS 578T,27.555555555555557
+Sorafenib tosylate,Docetaxel,T-47D,-0.6666666666666666
+Docetaxel,Celecoxib,RPMI-8226,16.0
+Everolimus,Imatinib mesylate,HT29,-15.444444444444445
+Vinblastine sulfate (hydrate),Imatinib mesylate,EKVX,-6.4444444444444455
+Thalidomide,Sirolimus,SK-MEL-5,-6.5555555555555545
+Paclitaxel,Celecoxib,IGROV1,17.444444444444443
+Docetaxel,Tretinoin,BT-549,25.11111111111111
+Tamoxifen citrate,Tretinoin,HOP-62,-26.0
+Fulvestrant,Everolimus,ACHN,-2.333333333333333
+Mitotane,Cladribine,PC-3,-4.2222222222222205
+Romidepsin,Tretinoin,SF-268,-0.6666666666666666
+Fulvestrant,Celecoxib,SK-MEL-5,-3.888888888888889
+Vorinostat,Cladribine,SK-MEL-28,-1.6666666666666667
+Dasatinib,Vorinostat,HCT-15,2.0
+Dasatinib,Tretinoin,HCT-15,-8.222222222222221
+Sorafenib tosylate,Celecoxib,MDA-MB-435,-3.888888888888889
+Vorinostat,Cladribine,T-47D,-4.666666666666667
+Everolimus,Cladribine,T-47D,-5.0
+Sorafenib tosylate,Tretinoin,OVCAR-8,6.1111111111111125
+Mitotane,Sirolimus,MDA-MB-231/ATCC,-1.5555555555555556
+Vinblastine sulfate (hydrate),Imatinib mesylate,UACC-62,7.1111111111111125
+Dasatinib,Celecoxib,HT29,3.6666666666666665
+Tretinoin,Cladribine,IGROV1,2.333333333333333
+Vinblastine sulfate (hydrate),Paclitaxel,MDA-MB-468,3.4444444444444446
+Vorinostat,Docetaxel,HT29,14.0
+Docetaxel,Celecoxib,SF-539,22.66666666666667
+Thalidomide,Mitotane,KM12,-0.3333333333333333
+Mitotane,Cladribine,NCI-H460,-7.333333333333332
+Fulvestrant,Sirolimus,HCT-116,-10.555555555555557
+Tamoxifen citrate,Celecoxib,NCI-H226,-9.444444444444443
+Sorafenib tosylate,Everolimus,NCI-H460,-5.222222222222221
+Dasatinib,Paclitaxel,SW-620,-0.1111111111111111
+Fulvestrant,Paclitaxel,NCI-H226,0.0
+Sirolimus,Cladribine,HCT-116,-4.2222222222222205
+Sirolimus,Mitotane,MCF7,-4.5555555555555545
+Nilotinib,Cladribine,MDA-MB-231/ATCC,-4.111111111111111
+Docetaxel,Celecoxib,NCI-H226,8.555555555555555
+Romidepsin,Paclitaxel,A549/ATCC,0.1111111111111111
+Fulvestrant,Sirolimus,KM12,-6.0
+Nilotinib,Cladribine,MCF7,-0.3333333333333333
+Vinblastine sulfate (hydrate),Tamoxifen citrate,HOP-92,11.555555555555555
+Everolimus,Vorinostat,SK-MEL-28,-13.333333333333336
+Tretinoin,Celecoxib,SW-620,-7.777777777777778
+Fulvestrant,Everolimus,DU-145,15.777777777777779
+Mitotane,Tamoxifen citrate,LOX IMVI,5.0
+Fulvestrant,Sirolimus,UO-31,-0.8888888888888888
+Fulvestrant,Celecoxib,HL-60(TB),-14.333333333333336
+Sorafenib tosylate,Nilotinib,IGROV1,1.2222222222222223
+Docetaxel,Imatinib mesylate,IGROV1,8.333333333333334
+Sirolimus,Tamoxifen citrate,MCF7,0.2222222222222222
+Fulvestrant,Vorinostat,MDA-MB-231/ATCC,-4.888888888888889
+Sirolimus,Nilotinib,MDA-MB-468,1.4444444444444444
+Fulvestrant,Cladribine,NCI-H460,0.0
+Thalidomide,Mitotane,MDA-MB-231/ATCC,-0.4444444444444444
+Fulvestrant,Celecoxib,HCT-116,-9.333333333333334
+Fulvestrant,Tretinoin,KM12,-2.333333333333333
+Nilotinib,Mitotane,UACC-257,-2.0
+Mitotane,Tamoxifen citrate,MALME-3M,-2.2222222222222223
+Quinacrine hydrochloride,Docetaxel,BT-549,4.888888888888889
+Vorinostat,Tretinoin,HCT-116,-1.3333333333333333
+Sirolimus,Vinblastine sulfate (hydrate),MCF7,-2.888888888888889
+Dasatinib,Paclitaxel,OVCAR-3,13.666666666666664
+Quinacrine hydrochloride,Cladribine,EKVX,-15.0
+Quinacrine hydrochloride,Vinblastine sulfate (hydrate),RPMI-8226,-5.0
+Vinblastine sulfate (hydrate),Celecoxib,RPMI-8226,-0.5555555555555556
+Sirolimus,Vinblastine sulfate (hydrate),T-47D,-6.222222222222222
+Sorafenib tosylate,Docetaxel,OVCAR-8,4.0
+Sorafenib tosylate,Everolimus,A549/ATCC,-17.777777777777782
+Romidepsin,Celecoxib,SF-539,1.4444444444444444
+Romidepsin,Docetaxel,A498,1.0
+Vinblastine sulfate (hydrate),Paclitaxel,SK-MEL-5,-3.4444444444444446
+Thalidomide,Cladribine,KM12,-15.333333333333336
+Nilotinib,Cladribine,BT-549,-5.4444444444444455
+Docetaxel,Tamoxifen citrate,MDA-MB-231/ATCC,25.33333333333333
+Romidepsin,Docetaxel,NCI-H522,-3.333333333333333
+Tamoxifen citrate,Cladribine,T-47D,-1.4444444444444444
+Everolimus,Tamoxifen citrate,HCT-15,0.0
+Paclitaxel,Imatinib mesylate,NCI-H460,14.555555555555555
+Paclitaxel,Nilotinib,OVCAR-3,29.66666666666667
+Sirolimus,Tretinoin,OVCAR-4,6.4444444444444455
+Sorafenib tosylate,Sirolimus,A549/ATCC,7.0
+Thalidomide,Mitotane,LOX IMVI,-4.2222222222222205
+Thalidomide,Paclitaxel,OVCAR-4,-1.6666666666666667
+Imatinib mesylate,Celecoxib,SF-539,-2.333333333333333
+Everolimus,Tamoxifen citrate,NCI-H322M,-8.888888888888891
+Imatinib mesylate,Tretinoin,UO-31,-2.6666666666666665
+Vinblastine sulfate (hydrate),Cladribine,NCI-H226,-11.555555555555555
+Nilotinib,Celecoxib,HS 578T,-5.777777777777778
+Vorinostat,Vinblastine sulfate (hydrate),A549/ATCC,-1.1111111111111112
+Fulvestrant,Celecoxib,KM12,-3.0
+Romidepsin,Docetaxel,T-47D,-1.7777777777777777
+Nilotinib,Cladribine,RPMI-8226,-0.2222222222222222
+Quinacrine hydrochloride,Cladribine,IGROV1,-1.8888888888888888
+Nilotinib,Tamoxifen citrate,NCI-H23,-3.7777777777777777
+Fulvestrant,Everolimus,HT29,11.666666666666664
+Romidepsin,Imatinib mesylate,SK-MEL-28,0.1111111111111111
+Vinblastine sulfate (hydrate),Imatinib mesylate,HT29,4.0
+Mitotane,Paclitaxel,NCI-H522,-3.333333333333333
+Sorafenib tosylate,Cladribine,NCI-H522,-11.444444444444445
+Mitotane,Everolimus,DU-145,10.111111111111107
+Mitotane,Imatinib mesylate,OVCAR-3,-10.444444444444443
+Dasatinib,Vorinostat,HT29,-1.8888888888888888
+Vinblastine sulfate (hydrate),Imatinib mesylate,IGROV1,-2.1111111111111107
+Everolimus,Cladribine,MDA-MB-468,1.2222222222222223
+Dasatinib,Romidepsin,T-47D,2.6666666666666665
+Cladribine,Celecoxib,T-47D,-10.444444444444443
+Fulvestrant,Nilotinib,MDA-MB-435,-2.7777777777777777
+Sorafenib tosylate,Paclitaxel,IGROV1,-1.4444444444444444
+Fulvestrant,Imatinib mesylate,UACC-257,-7.888888888888887
+Mitotane,Tretinoin,UO-31,2.7777777777777777
+Everolimus,Tamoxifen citrate,RPMI-8226,7.4444444444444455
+Docetaxel,Imatinib mesylate,HCT-116,17.11111111111111
+Imatinib mesylate,Tretinoin,LOX IMVI,-1.4444444444444444
+Vinblastine sulfate (hydrate),Romidepsin,SW-620,-1.2222222222222223
+Romidepsin,Cladribine,OVCAR-4,-0.8888888888888888
+Mitotane,Tretinoin,MALME-3M,-6.333333333333332
+Vinblastine sulfate (hydrate),Sirolimus,SW-620,1.1111111111111112
+Nilotinib,Celecoxib,NCI-H522,-4.777777777777779
+Vorinostat,Sirolimus,SK-MEL-5,-4.333333333333333
+Sorafenib tosylate,Everolimus,EKVX,-16.77777777777778
+Mitotane,Celecoxib,HCT-15,-3.6666666666666665
+Nilotinib,Imatinib mesylate,HL-60(TB),-25.11111111111111
+Sirolimus,Nilotinib,KM12,-6.1111111111111125
+Vorinostat,Cladribine,UACC-62,-11.111111111111107
+Everolimus,Imatinib mesylate,PC-3,-5.333333333333333
+Romidepsin,Paclitaxel,IGROV1,-2.555555555555556
+Fulvestrant,Nilotinib,NCI-H322M,-5.666666666666668
+Everolimus,Dasatinib,SW-620,-1.6666666666666667
+Everolimus,Dasatinib,SF-268,-3.7777777777777777
+Docetaxel,Nilotinib,LOX IMVI,13.777777777777779
+Quinacrine hydrochloride,Cladribine,HOP-62,-11.111111111111107
+Vinblastine sulfate (hydrate),Imatinib mesylate,OVCAR-4,-2.2222222222222223
+Dasatinib,Tamoxifen citrate,SK-MEL-28,-4.4444444444444455
+Vinblastine sulfate (hydrate),Dasatinib,MALME-3M,-3.6666666666666665
+Sorafenib tosylate,Nilotinib,K-562,15.888888888888893
+Everolimus,Tretinoin,NCI-H322M,-3.2222222222222223
+Dasatinib,Cladribine,NCI-H322M,-12.111111111111107
+Everolimus,Tretinoin,MALME-3M,4.777777777777779
+Vinblastine sulfate (hydrate),Paclitaxel,SK-OV-3,-0.3333333333333333
+Sorafenib tosylate,Tamoxifen citrate,LOX IMVI,-3.333333333333333
+Sorafenib tosylate,Tamoxifen citrate,MDA-MB-231/ATCC,1.6666666666666667
+Mitotane,Imatinib mesylate,HL-60(TB),5.4444444444444455
+Sirolimus,Cladribine,PC-3,-2.888888888888889
+Paclitaxel,Cladribine,OVCAR-8,-3.111111111111111
+Vorinostat,Cladribine,SK-MEL-5,1.5555555555555556
+Quinacrine hydrochloride,Sirolimus,T-47D,1.7777777777777777
+Nilotinib,Celecoxib,NCI-H23,-9.555555555555557
+Quinacrine hydrochloride,Docetaxel,SF-539,9.333333333333334
+Sorafenib tosylate,Everolimus,NCI-H322M,-12.666666666666664
+Quinacrine hydrochloride,Sirolimus,MDA-MB-468,1.4444444444444444
+Mitotane,Paclitaxel,HS 578T,-3.888888888888889
+Romidepsin,Vinblastine sulfate (hydrate),NCI-H322M,-16.0
+Romidepsin,Imatinib mesylate,SF-268,-9.444444444444443
+Romidepsin,Docetaxel,IGROV1,3.4444444444444446
+Thalidomide,Sirolimus,DU-145,-5.777777777777778
+Fulvestrant,Cladribine,HOP-92,-0.4444444444444444
+Thalidomide,Docetaxel,RPMI-8226,-11.666666666666664
+Quinacrine hydrochloride,Cladribine,SK-MEL-28,-4.4444444444444455
+Tamoxifen citrate,Celecoxib,U251,-2.4444444444444446
+Everolimus,Dasatinib,LOX IMVI,-6.0
+Paclitaxel,Tretinoin,HS 578T,38.111111111111114
+Docetaxel,Sirolimus,MALME-3M,-9.666666666666666
+Vorinostat,Imatinib mesylate,UACC-257,-8.333333333333334
+Sirolimus,Vinblastine sulfate (hydrate),OVCAR-3,0.4444444444444444
+Fulvestrant,Tamoxifen citrate,EKVX,-0.1111111111111111
+Vinblastine sulfate (hydrate),Nilotinib,HL-60(TB),9.444444444444443
+Docetaxel,Sirolimus,DU-145,3.6666666666666665
+Quinacrine hydrochloride,Mitotane,BT-549,3.2222222222222223
+Everolimus,Romidepsin,U251,0.6666666666666666
+Sirolimus,Nilotinib,NCI-H226,-7.555555555555554
+Vorinostat,Romidepsin,NCI-H226,-9.111111111111107
+Docetaxel,Paclitaxel,OVCAR-8,-4.666666666666667
+Vorinostat,Docetaxel,OVCAR-8,1.3333333333333333
+Romidepsin,Cladribine,K-562,-3.4444444444444446
+Dasatinib,Vorinostat,SF-268,-0.7777777777777778
+Thalidomide,Vinblastine sulfate (hydrate),HCT-15,-6.888888888888888
+Vorinostat,Nilotinib,T-47D,-14.444444444444445
+Sorafenib tosylate,Romidepsin,HT29,1.0
+Docetaxel,Tretinoin,UACC-62,19.22222222222221
+Tamoxifen citrate,Celecoxib,UACC-62,-1.7777777777777777
+Vinblastine sulfate (hydrate),Celecoxib,MDA-MB-231/ATCC,-5.0
+Mitotane,Docetaxel,KM12,-3.888888888888889
+Quinacrine hydrochloride,Paclitaxel,HCT-15,-3.111111111111111
+Everolimus,Nilotinib,HS 578T,-17.22222222222222
+Sirolimus,Tamoxifen citrate,MDA-MB-231/ATCC,-5.0
+Paclitaxel,Cladribine,NCI-H522,0.6666666666666666
+Fulvestrant,Imatinib mesylate,DU-145,-4.777777777777779

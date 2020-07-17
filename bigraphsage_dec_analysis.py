@@ -1,0 +1,250 @@
+import os
+import pdb
+import torch
+import numpy as np
+import pandas as pd
+import matplotlib.pyplot as plt
+from sklearn.metrics import mean_squared_error 
+
+from tmain_bigraphsage_decoder import arg_parse, build_bigraphsage_model
+
+class Analyse():
+    def __init__(self, dir_opt):
+        self.dir_opt = dir_opt
+
+    def rebuild_loss_pearson(self, path, epoch_num):
+        epoch_loss_list = []
+        epoch_pearson_list = []
+        min_train_loss = 100
+        min_train_id = 0
+        for i in range(1, epoch_num + 1):
+            train_df = pd.read_csv(path + '/TrainingPred_' + str(i) + '.txt', delimiter=',')
+            score_list = list(train_df['Score'])
+            pred_list = list(train_df['Pred Score'])
+            epoch_loss = mean_squared_error(score_list, pred_list)
+            epoch_loss_list.append(epoch_loss)
+            epoch_pearson = train_df.corr(method = 'pearson')
+            epoch_pearson_list.append(epoch_pearson['Pred Score'][0])
+            if epoch_loss < min_train_loss:
+                min_train_loss = epoch_loss
+                min_train_id = i
+        print('-------------BEST MODEL ID:' + str(min_train_id) + '-------------')
+        print('BEST MODEL TRAIN LOSS: ', min_train_loss)
+        print('BEST MODEL PEARSON CORR: ', epoch_pearson_list[min_train_id - 1])
+        print('\n-------------EPOCH TRAINING PEARSON CORRELATION LIST: -------------')
+        print(epoch_pearson_list)
+        print('\n-------------EPOCH TRAINING MSE LOSS LIST: -------------')
+        print(epoch_loss_list)
+        epoch_pearson_array = np.array(epoch_pearson_list)
+        epoch_loss_array = np.array(epoch_loss_list)
+        np.save(path + '/pearson.npy', epoch_pearson_array)
+        np.save(path + '/loss.npy', epoch_loss_array)
+
+    def plot_loss_pearson(self, path, epoch_num):
+        epoch_pearson_array = np.load(path + '/pearson.npy')
+        epoch_loss_array = np.load(path + '/loss.npy')
+        x = range(1, epoch_num + 1)
+        plt.figure(1)
+        plt.title('Training Loss and Pearson Correlation in ' + str(epoch_num) + ' Epochs') 
+        plt.xlabel('Train Epochs') 
+        plt.figure(1)
+        plt.subplot(211)
+        plt.plot(x, epoch_loss_array) 
+        plt.subplot(212)
+        plt.plot(x, epoch_pearson_array)
+        plt.show()
+
+
+    def reform_weight_adj(self, RNA_seq_filename, model, dataset_num, conv_concat):
+        dir_opt = self.dir_opt
+        # WEIGHT PARAMETETS IN MODEL, ALSO (Src -> Dest)
+        if model:
+            print('\nLOADING WEIGHT PARAMETERS FROM SAVED MODEL...')
+            first_conv_up_weight = model.conv_first.up_weight_adj.cpu().data.numpy()
+            first_conv_down_weight = model.conv_first.down_weight_adj.cpu().data.numpy()
+            block_conv_up_weight = model.conv_block[0].up_weight_adj.cpu().data.numpy()
+            block_conv_down_weight = model.conv_block[0].down_weight_adj.cpu().data.numpy()
+            last_conv_up_weight = model.conv_last.up_weight_adj.cpu().data.numpy()
+            last_conv_down_weight = model.conv_last.down_weight_adj.cpu().data.numpy()
+            if os.path.exists('.' + dir_opt + '/bianalyse_data') == False:
+                os.mkdir('.' + dir_opt + '/bianalyse_data')
+            if os.path.exists('.' + dir_opt + '/bianalyse_data/' + dataset_num) == False:
+                os.mkdir('.' + dir_opt + '/bianalyse_data/' + dataset_num)
+            np.save('.' + dir_opt + '/bianalyse_data/' + dataset_num + '/first_conv_up_weight.npy', first_conv_up_weight)
+            np.save('.' + dir_opt + '/bianalyse_data/' + dataset_num + '/first_conv_down_weight.npy', first_conv_down_weight)
+            np.save('.' + dir_opt + '/bianalyse_data/' + dataset_num + '/block_conv_up_weight.npy', block_conv_up_weight)
+            np.save('.' + dir_opt + '/bianalyse_data/' + dataset_num + '/block_conv_down_weight.npy', block_conv_down_weight)
+            np.save('.' + dir_opt + '/bianalyse_data/' + dataset_num + '/last_conv_up_weight.npy', last_conv_up_weight)
+            np.save('.' + dir_opt + '/bianalyse_data/' + dataset_num + '/last_conv_down_weight.npy', last_conv_down_weight)
+            # print(first_conv_up_weight)
+            # print(block_conv_up_weight)
+            # print(last_conv_up_weight)
+        else:
+            print('\nLOADING WEIGHT FROM SAVE NUMPY FILES...')
+            first_conv_up_weight = np.load('.' + dir_opt + '/bianalyse_data/' + dataset_num + '/first_conv_up_weight.npy')
+            first_conv_down_weight = np.load('.' + dir_opt + '/bianalyse_data/' + dataset_num + '/first_conv_down_weight.npy')
+            block_conv_up_weight = np.load('.' + dir_opt + '/bianalyse_data/' + dataset_num + '/block_conv_up_weight.npy')
+            block_conv_down_weight = np.load('.' + dir_opt + '/bianalyse_data/' + dataset_num + '/block_conv_down_weight.npy')
+            last_conv_up_weight = np.load('.' + dir_opt + '/bianalyse_data/' + dataset_num + '/last_conv_up_weight.npy')
+            last_conv_down_weight = np.load('.' + dir_opt + '/bianalyse_data/' + dataset_num + '/last_conv_down_weight.npy')
+
+        # FORM [cellline_gene_dict] TO MAP GENES WITH INDEX NUM !!! START FROM 1
+        cellline_gene_df = pd.read_csv('.' + dir_opt + '/filtered_data/' + RNA_seq_filename + '.csv')
+        cellline_gene_list = list(cellline_gene_df['geneSymbol'])
+        cellline_gene_num_dict = {i : cellline_gene_list[i - 1] for i in range(1, len(cellline_gene_list) + 1)}
+        # GENE-GENE ADJACENT MATRIX (Src -> Dest)
+        form_data_path = '.' + dir_opt + '/form_data'
+        cellline_gene_num_df = pd.read_csv(form_data_path + '/gene_connection_num.txt')
+        src_gene_list = list(cellline_gene_num_df['src'])
+        dest_gene_list = list(cellline_gene_num_df['dest'])
+        num_gene = len(cellline_gene_df)
+        num_node = num_gene + 2
+        gene_adj = np.zeros((num_node, num_node))
+        for i in range(len(src_gene_list)):
+            row_idx = src_gene_list[i] - 1
+            col_idx = dest_gene_list[i] - 1
+            gene_adj[row_idx, col_idx] = 1
+        
+        # WEIGHTING [Absolute Value] ADJACENT GENE-GENE MATRICES (Src -> Dest)
+        first_conv_up_weight_adj = np.multiply(gene_adj, np.absolute(first_conv_up_weight))
+        block_conv_up_weight_adj = np.multiply(gene_adj, np.absolute(block_conv_up_weight))
+        last_conv_up_weight_adj = np.multiply(gene_adj, np.absolute(last_conv_up_weight))
+        # WEIGHTING [Absolute Value] ADJACENT GENE-GENE MATRICES (Dest -> Src)
+        first_conv_down_weight_adj = np.multiply(gene_adj, np.absolute(first_conv_down_weight))
+        block_conv_down_weight_adj = np.multiply(gene_adj, np.absolute(block_conv_down_weight))
+        last_conv_down_weight_adj = np.multiply(gene_adj, np.absolute(last_conv_down_weight))
+        # OPTION ON CONCATING WEIGHT ADJ IN [first, block, last] LAYERS
+        if conv_concat == False:
+            conv_up_weight_adj = first_conv_up_weight_adj
+            conv_down_weight_adj = first_conv_down_weight_adj
+        else:
+            conv_up_weight_adj = (1/3) * (first_conv_up_weight_adj + block_conv_up_weight_adj + last_conv_up_weight_adj)
+            conv_down_weight_adj = (1/3) * (first_conv_down_weight_adj + block_conv_down_weight_adj + last_conv_down_weight_adj)
+        return conv_up_weight_adj, conv_down_weight_adj
+        
+    def form_weight_edge(self, RNA_seq_filename, model, dataset_num_list, conv_concat):
+        dir_opt = self.dir_opt
+        # FORM [cellline_gene_dict] TO MAP GENES WITH INDEX NUM !!! START FROM 1
+        cellline_gene_df = pd.read_csv('.' + dir_opt + '/filtered_data/' + RNA_seq_filename + '.csv')
+        cellline_gene_list = list(cellline_gene_df['geneSymbol'])
+        cellline_gene_num_dict = {i : cellline_gene_list[i - 1] for i in range(1, len(cellline_gene_list) + 1)}
+        print(cellline_gene_num_dict)
+        # GENE-GENE ADJACENT MATRIX (Src -> Dest)
+        form_data_path = '.' + dir_opt + '/form_data'
+        cellline_gene_num_df = pd.read_csv(form_data_path + '/gene_connection_num.txt')
+        src_gene_list = list(cellline_gene_num_df['src'])
+        dest_gene_list = list(cellline_gene_num_df['dest'])
+        num_gene = len(cellline_gene_df)
+        num_node = num_gene + 2
+        gene_adj = np.zeros((num_node, num_node))
+        for i in range(len(src_gene_list)):
+            row_idx = src_gene_list[i] - 1
+            col_idx = dest_gene_list[i] - 1
+            gene_adj[row_idx, col_idx] = 1
+        # COMBINE ALL DATASET [conv_up, conv_down]
+        count = 0
+        conv_up_weight_adj_bind = np.zeros((num_node, num_node))
+        conv_down_weight_adj_bind = np.zeros((num_node, num_node))
+        for dataset_num in dataset_num_list:
+            count += 1
+            conv_up_weight_adj, conv_down_weight_adj = Analyse(dir_opt).reform_weight_adj(RNA_seq_filename, model, dataset_num, conv_concat)
+            conv_up_weight_adj_bind += conv_up_weight_adj
+            conv_down_weight_adj_bind += conv_down_weight_adj
+        conv_up_weight_adj_bind = (1 / count) * conv_up_weight_adj_bind
+        conv_down_weight_adj_bind = (1 / count) * conv_down_weight_adj_bind
+
+        # CONVERT ADJACENT MATRICES TO EDGES, GENE ID STARTS WITH 1 (UP WITH src -> dest) (DOWN WITH dest -> src)
+        up_src_gene_name_list = []
+        up_dest_gene_name_list = []
+        up_src_gene_num_list = []
+        up_dest_gene_num_list = []
+        up_weight_edge_list = []
+        down_src_gene_name_list = []
+        down_dest_gene_name_list = []
+        down_src_gene_num_list = []
+        down_dest_gene_num_list = []
+        down_weight_edge_list = []
+        for row in range(num_gene):
+            for col in range(num_gene):
+                if gene_adj[row, col]:
+                    # RECORD FOR [src -> dest]
+                    up_src_gene_name_list.append(cellline_gene_num_dict[row + 1])
+                    up_dest_gene_name_list.append(cellline_gene_num_dict[col + 1])
+                    up_src_gene_num_list.append(row + 1)
+                    up_dest_gene_num_list.append(col + 1)
+                    # RECORD FOR [dest -> src]
+                    down_src_gene_name_list.append(cellline_gene_num_dict[col + 1])
+                    down_dest_gene_name_list.append(cellline_gene_num_dict[row + 1])
+                    down_src_gene_num_list.append(col + 1)
+                    down_dest_gene_num_list.append(row + 1)
+                    # ########ONLY USE FIRST CONV WEIGHT########
+                    up_weight_edge = conv_up_weight_adj_bind[row, col]
+                    up_weight_edge_list.append(up_weight_edge)
+                    down_weight_edge = conv_down_weight_adj_bind[row, col]
+                    down_weight_edge_list.append(down_weight_edge)
+        up_weight_src_dest = {'src': up_src_gene_num_list, 'src_name': up_src_gene_name_list, \
+                        'dest': up_dest_gene_num_list, 'dest_name': up_dest_gene_name_list, \
+                        'weight': up_weight_edge_list}
+        down_weight_src_dest = {'src': down_src_gene_num_list, 'src_name': down_src_gene_name_list, \
+                        'dest': down_dest_gene_num_list, 'dest_name': down_dest_gene_name_list, \
+                        'weight': down_weight_edge_list}
+        gene_up_weight_edge_df = pd.DataFrame(up_weight_src_dest)
+        gene_down_weight_edge_df = pd.DataFrame(down_weight_src_dest)
+        print('\n--------UPSTREAM TO DOWNSTREAM GENE EDGES WEIGHT--------')
+        print(gene_up_weight_edge_df)
+        print('\n--------DOWNSTREAM TO UPSTREAM GENE EDGES WEIGHT--------')
+        print(gene_down_weight_edge_df)
+        gene_up_weight_edge_df.to_csv('.' + dir_opt + '/bianalyse_data/gene_up_weight_edge.csv', index = False, header = True)
+        gene_down_weight_edge_df.to_csv('.' + dir_opt + '/bianalyse_data/gene_down_weight_edge.csv', index = False, header = True)
+
+        # CONVERT ADJACENT MATRICES TO EDGES, GENE ID STARTS WITH 1 (BIND WITH UP/DOWN)
+        conv_mean_weight_adj_bind = (1/2) * (conv_up_weight_adj_bind + conv_down_weight_adj_bind)
+        bind_src_gene_name_list = []
+        bind_dest_gene_name_list = []
+        bind_src_gene_num_list = []
+        bind_dest_gene_num_list = []
+        bind_weight_edge_list = []
+        for row in range(num_gene):
+            for col in range(num_gene):
+                if gene_adj[row, col]:
+                    # RECORD FOR [src -> dest]
+                    bind_src_gene_name_list.append(cellline_gene_num_dict[row + 1])
+                    bind_dest_gene_name_list.append(cellline_gene_num_dict[col + 1])
+                    bind_src_gene_num_list.append(row + 1)
+                    bind_dest_gene_num_list.append(col + 1)
+                    mean_weight_edge = conv_mean_weight_adj_bind[row, col]
+                    bind_weight_edge_list.append(mean_weight_edge)
+        bind_weight_src_dest = {'src': bind_src_gene_num_list, 'src_name': bind_src_gene_name_list, \
+                        'dest': bind_dest_gene_num_list, 'dest_name': bind_dest_gene_name_list, \
+                        'weight': bind_weight_edge_list}
+        gene_bind_weight_edge_df = pd.DataFrame(bind_weight_src_dest)
+        print('\n--------BIND-STREAM GENE EDGES WEIGHT--------')
+        print(gene_bind_weight_edge_df)
+        gene_bind_weight_edge_df.to_csv('.' + dir_opt + '/bianalyse_data/gene_bind_weight_edge.csv', index = False, header = True)
+
+
+
+if __name__ == "__main__":
+    # BASICAL PARAMETERS IN FILES
+    dir_opt = '/datainfo2'
+    RNA_seq_filename = 'nci60-ccle_RNAseq_tpm2'
+    path = '.' + dir_opt + '/result/epoch_75'
+
+    # # ANALYSE [MSE_LOSS/PEARSON CORRELATION] FROM RECORDED FILES
+    # epoch_num = 75
+    # Analyse(dir_opt).rebuild_loss_pearson(path, epoch_num)
+    # Analyse(dir_opt).plot_loss_pearson(path, epoch_num)
+
+    # REBUILD MODEL AND ANALYSIS PARAMTERS
+    # IF CHANGE LOADED MODEL, NEED TO CHANGE [.pth / dataset_num_list]
+    prog_args = arg_parse()
+    load_model = False
+    if load_model == True:
+        model = build_bigraphsage_model(prog_args)
+        model.load_state_dict(torch.load('./datainfo2/result/epoch_75_4d/best_train_model.pth'))
+    else:
+        model = 0
+    # dataset_num_list = ['dataset1', 'dataset3', 'dataset5', 'dataset7', 'dataset9']
+    dataset_num_list = ['dataset2', 'dataset4', 'dataset6', 'dataset8', 'dataset10']
+    conv_concat = True
+    Analyse(dir_opt).form_weight_edge(RNA_seq_filename, model, dataset_num_list, conv_concat)

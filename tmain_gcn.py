@@ -1,0 +1,196 @@
+import os
+import pdb
+import torch
+import argparse
+import tensorboardX
+import numpy as np
+import pandas as pd
+import torch.nn as nn
+from torch.autograd import Variable
+
+from load.read_graph import read_train_batch
+from load.graph_sampler import GraphLoader
+from enc_dec.gcn_encoder import GcnEncoderGraph
+
+# PARSE ARGUMENTS FROM COMMAND LINE
+def arg_parse():
+    parser = argparse.ArgumentParser(description='GRAPHPOOL ARGUMENTS.')
+    # ADD FOLLOWING ARGUMENTS
+    parser.add_argument('--cuda', dest = 'cuda',
+                help = 'CUDA.')
+    parser.add_argument('--add-self', dest = 'adj_self',
+                help = 'Graph convolution add nodes themselves.')
+    parser.add_argument('--adj', dest = 'adj',
+                help = 'Adjacent matrix is symmetry.')
+    parser.add_argument('--model', dest = 'model',
+                help = 'Model load.')
+    parser.add_argument('--lr', dest = 'lr', type = float,
+                help = 'Learning rate.')
+    parser.add_argument('--batch-size', dest = 'batch_size', type = int,
+                help = 'Batch size.')
+    parser.add_argument('--epochs', dest = 'num_epochs', type = int,
+                help = 'Number of epochs to train.')
+    parser.add_argument('--num_workers', dest = 'num_workers', type = int,
+                help = 'Number of workers to load data.')
+    parser.add_argument('--input-dim', dest = 'input_dim', type = int,
+                help = 'Input feature dimension')
+    parser.add_argument('--hidden-dim', dest = 'hidden_dim', type = int,
+                help = 'Hidden dimension')
+    parser.add_argument('--output-dim', dest = 'output_dim', type = int,
+                help = 'Output dimension')
+    parser.add_argument('--num-classes', dest = 'num_classes', type = int,
+                help = 'Number of label classes')
+    parser.add_argument('--num-gc-layers', dest = 'num_gc_layers', type = int,
+                help = 'Number of graph convolution layers before each pooling')
+    parser.add_argument('--nobn', dest = 'bn', action = 'store_const',
+                const = False, default = True,
+                help = 'Whether batch normalization is used')
+    parser.add_argument('--dropout', dest = 'dropout', type = float,
+                help = 'Dropout rate.')
+
+    # SET DEFAULT INPUT ARGUMENT
+    parser.set_defaults(cuda = '0',
+                        add_self = '0', # 'add'
+                        adj = 'sym', # 'sym'
+                        model = '0', # 'load'
+                        lr = 0.01,
+                        clip= 2.0,
+                        batch_size = 16,
+                        num_epochs = 50,
+                        num_workers = 2,
+                        input_dim = 3,
+                        hidden_dim = 3,
+                        output_dim = 3,
+                        num_classes = 1,
+                        num_gc_layer = 3,
+                        dropout = 0.0)
+    return parser.parse_args()
+
+def learning_rate_schedule(args, dl_input_num, iteration_num):
+    epoch_iteration = int(dl_input_num / args.batch_size)
+    l1 = (args.lr - 0.005) / (20 * epoch_iteration)
+    l2 = (0.005 - 0.0002) / (40 * epoch_iteration)
+    l3 = 0.0002
+    if iteration_num <= (20 *epoch_iteration):
+        learning_rate = args.lr - iteration_num * l1
+    elif iteration_num <= 40 * epoch_iteration:
+        learning_rate = 0.005 - iteration_num * l2
+    else:
+        learning_rate = l3
+    print('-------LEARNING RATE ' + str(learning_rate) + '-------' )
+    return learning_rate
+
+def build_gcn_model(args, pred_hidden_dim_list):
+    input_dim = args.input_dim
+    hidden_dim = args.hidden_dim
+    embedding_dim = args.output_dim
+    label_dim = args.num_classes
+    num_layer = args.num_gc_layer
+    graph_attribute_list, graph_adj_list, graph_inv_deg_list, graph_label_list = read_train_batch(0, 1, args)
+    dataset_loader, node_num, feature_dim = GraphLoader.load_graph(graph_attribute_list,
+                graph_adj_list, graph_inv_deg_list, graph_label_list, prog_args)
+    model = GcnEncoderGraph(args.add_self, input_dim, hidden_dim, embedding_dim, node_num, label_dim, num_layer, pred_hidden_dim_list)
+    return model
+
+def train_gcn_model(dataset, model, args, learning_rate):
+    optimizer = torch.optim.Adam(filter(lambda p : p.requires_grad, model.parameters()), lr = learning_rate)
+    # optimizer = torch.optim.SGD(model.parameters(), lr = args.lr, momentum = 0.9)
+    for batch_idx, data in enumerate(dataset):
+        optimizer.zero_grad()
+        adj = Variable(data['adj'].float(), requires_grad = False)
+        inv_deg = Variable(data['inv_deg'].float(), requires_grad = False)
+        x = Variable(data['feature'].float(), requires_grad = False)
+        label = Variable(data['label'].float())
+        # THIS WILL USE METHOD [def forward()] TO MAKE PREDICTION
+        ypred = model(x, adj, inv_deg)
+        loss = model.loss(ypred, label)
+        loss.backward()
+        nn.utils.clip_grad_norm(model.parameters(), args.clip)
+        optimizer.step()
+    return model, loss, ypred
+
+def train_gcn(args):
+    # BUILD [GCN + DNN] MODEL
+    pred_hidden_dim_list = [50]
+    model = build_gcn_model(args, pred_hidden_dim_list)
+    if args.model == 'load':
+        model.load_state_dict(torch.load('./datainfo2/result/epoch_50_1/model.pth'))
+    # TRAIN MODEL ON TRAINING DATASET
+    dir_opt = '/datainfo2'
+    form_data_path = '.' + dir_opt + '/form_data'
+    xTr = np.load(form_data_path + '/xTr.npy')
+    dl_input_num = xTr.shape[0]
+    epoch_num = args.num_epochs
+    learning_rate = args.lr
+    batch_size = args.batch_size
+    # RECORD EPOCH LOSS AND PEARSON CORRELATION
+    iteration_num = 0
+    epoch_loss_list = []
+    epoch_pearson_list = []
+    # CLEAN RESULT PREVIOUS EPOCH_I_PRED FILES
+    folder_name = 'epoch_' + str(epoch_num)
+    path = '.' + dir_opt + '/result/%s' % (folder_name)
+    unit = 1
+    while os.path.exists('.' + dir_opt + '/result') == False:
+        os.mkdir('.' + dir_opt + '/result')
+    while os.path.exists(path):
+        path = '.' + dir_opt + '/result/%s_%d' % (folder_name, unit)
+        unit += 1
+    os.mkdir(path)
+    for i in range(1, epoch_num + 1):
+        print('------------------------EPOCH: ' + str(i) + ' ------------------------')
+        model.train()
+        epoch_ypred = np.zeros((1, 1))
+        upper_index = 0
+        batch_loss_list = []
+        count = 0
+        last_weight = 0
+        for index in range(0, dl_input_num, batch_size):
+            if (index + batch_size) < dl_input_num:
+                upper_index = index + batch_size
+            else:
+                upper_index = dl_input_num
+            graph_attribute_list, graph_adj_list, graph_inv_deg_list, graph_label_list = read_train_batch(index, upper_index, args)
+            dataset_loader, node_num, feature_dim = GraphLoader.load_graph(graph_attribute_list,
+                        graph_adj_list, graph_inv_deg_list, graph_label_list, prog_args)
+            # ACTIVATE LEARNING RATE SCHEDULE
+            iteration_num += 1
+            learning_rate = learning_rate_schedule(args, dl_input_num, iteration_num)
+            model, batch_loss, batch_ypred = train_gcn_model(dataset_loader, model, args, learning_rate)
+            print(model.pred_model[2].weight)
+            batch_loss = batch_loss.item()
+            print('BATCH LOSS: ', batch_loss)
+            batch_loss_list.append(batch_loss)
+            # PRESERVE PREDICTION OF BATCH TRAINING DATA
+            batch_ypred = (Variable(batch_ypred).data).cpu().numpy()
+            epoch_ypred = np.vstack((epoch_ypred, batch_ypred))
+        epoch_loss = np.mean(batch_loss_list)
+        print('EPOCH ' + str(i) + ' MSE LOSS: ', epoch_loss)
+        epoch_loss_list.append(epoch_loss)
+        epoch_ypred = np.delete(epoch_ypred, 0, axis = 0)
+        print(epoch_ypred)
+        # PRESERVE PEARSON CORR FOR EVERY EPOCH
+        tmp_training_input_df = pd.read_csv('.' + dir_opt + '/filtered_data/TrainingInput.txt', delimiter = ',')
+        final_row, final_col = tmp_training_input_df.shape
+        epoch_ypred_lists = list(epoch_ypred)
+        epoch_ypred_list = [item for elem in epoch_ypred_lists for item in elem]
+        tmp_training_input_df.insert(final_col, 'Pred Score', epoch_ypred_list, True)
+        epoch_pearson = tmp_training_input_df.corr(method = 'pearson')
+        epoch_pearson_list.append(epoch_pearson)
+        tmp_training_input_df.to_csv(path + '/TrainingPred_' + str(i) + '.txt', index = False, header = True)
+        print('EPOCH ' + str(i) + ' PEARSON CORRELATION: ', epoch_pearson)
+        # SAVE MODEL IN EVERY EPOCH AVOID ACCIDENT
+        torch.save(model.state_dict(), path + '/model.pth')
+    print('EPOCH PEARSON CORRELATION LIST: ', epoch_pearson_list)
+    print('EPOCH MSE LOSS LIST: ', epoch_loss_list)
+    torch.save(model.state_dict(), path + '/model.pth')
+
+
+if __name__ == "__main__":
+    # PARSE ARGUMENT FROM TERMINAL OR DEFAULT PARAMETERS
+    prog_args = arg_parse()
+    # CHECK CUDA GPU DEVICES ON MACHINE
+    os.environ['CUDA_VISIBLE_DEVICES'] = prog_args.cuda
+    print('CUDA', prog_args.cuda)
+    train_gcn(prog_args)
+

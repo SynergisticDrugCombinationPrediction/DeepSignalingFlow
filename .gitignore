@@ -1,0 +1,19 @@
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.DS_Store
+*.log
+.vscode/
+
+
+# datainfo/mid_data/
+datainfo2/mid_data/DeepLearningInput.txt
+datainfo2/mid_data/MidDeepLearningInput.txt
+datainfo2/mid_data/FinalDeepLearningInput.txt
+datainfo2/mid_data/nci60-ccle_RNAseq_tpm2.csv
+# datainfo2/filtered_data/
+datainfo2/filtered_data/*.npy
+datainfo2/filtered_data/nci60-ccle_RNAseq_tpm2.csv
+datainfo2/filtered_data/ZeroFinalDeepLearningInput.txt
+# datainfo2/[form_data/result]
+datainfo2/form_data/
+datainfo2/result/
