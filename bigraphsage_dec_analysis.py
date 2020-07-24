@@ -54,6 +54,45 @@ class Analyse():
         plt.plot(x, epoch_pearson_array)
         plt.show()
 
+    def plot_train_real_pred(self, path, epoch_time):
+        # ALL POINTS PREDICTION SCATTERPLOT
+        dir_opt = self.dir_opt
+        pred_dl_input_df = pd.read_csv(path + '/TrainingPred_75.txt', delimiter = ',')
+        print(pred_dl_input_df.corr(method = 'pearson'))
+        title = 'Scatter Plot After ' + epoch_time + ' Iterations In Training Dataset'
+        ax = pred_dl_input_df.plot(x = 'Score', y = 'Pred Score',
+                    style = 'o', legend = False, title = title)
+        ax.set_xlabel('Score')
+        ax.set_ylabel('Pred Score')
+        # SAVE TRAINING PLOT FIGURE
+        file_name = 'epoch_' + epoch_time + '_train'
+        path = '.' + dir_opt + '/plot/%s' % (file_name) + '.png'
+        unit = 1
+        if os.path.exists('.' + dir_opt + '/plot') == False:
+            os.mkdir('.' + dir_opt + '/plot')
+        while os.path.exists(path):
+            path = '.' + dir_opt + '/plot/%s_%d' % (file_name, unit) + '.png'
+            unit += 1
+        plt.savefig(path, dpi = 300)
+        
+    def plot_test_real_pred(self, path, epoch_time):
+        # ALL POINTS PREDICTION SCATTERPLOT
+        dir_opt = self.dir_opt
+        pred_dl_input_df = pd.read_csv(path + '/TestPred.txt', delimiter = ',')
+        print(pred_dl_input_df.corr(method = 'pearson'))
+        title = 'Scatter Plot After ' + epoch_time + ' Iterations In Validation Dataset'
+        ax = pred_dl_input_df.plot(x = 'Score', y = 'Pred Score',
+                    style = 'o', legend = False, title = title)
+        ax.set_xlabel('Score')
+        ax.set_ylabel('Pred Score')
+        # SAVE TEST PLOT FIGURE
+        file_name = 'epoch_' + epoch_time + '_validation'
+        path = '.' + dir_opt + '/plot/%s' % (file_name) + '.png'
+        unit = 1
+        while os.path.exists(path):
+            path = '.' + dir_opt + '/plot/%s_%d' % (file_name, unit) + '.png'
+            unit += 1
+        plt.savefig(path, dpi = 300)
 
     def reform_weight_adj(self, RNA_seq_filename, model, dataset_num, conv_concat):
         dir_opt = self.dir_opt
@@ -228,23 +267,29 @@ if __name__ == "__main__":
     # BASICAL PARAMETERS IN FILES
     dir_opt = '/datainfo2'
     RNA_seq_filename = 'nci60-ccle_RNAseq_tpm2'
-    path = '.' + dir_opt + '/result/epoch_75'
+    path = '.' + dir_opt + '/result/epoch_75_1d'
 
-    # # ANALYSE [MSE_LOSS/PEARSON CORRELATION] FROM RECORDED FILES
+    # ANALYSE [MSE_LOSS/PEARSON CORRELATION] FROM RECORDED FILES
     # epoch_num = 75
     # Analyse(dir_opt).rebuild_loss_pearson(path, epoch_num)
     # Analyse(dir_opt).plot_loss_pearson(path, epoch_num)
 
-    # REBUILD MODEL AND ANALYSIS PARAMTERS
-    # IF CHANGE LOADED MODEL, NEED TO CHANGE [.pth / dataset_num_list]
-    prog_args = arg_parse()
-    load_model = False
-    if load_model == True:
-        model = build_bigraphsage_model(prog_args)
-        model.load_state_dict(torch.load('./datainfo2/result/epoch_75_4d/best_train_model.pth'))
-    else:
-        model = 0
-    # dataset_num_list = ['dataset1', 'dataset3', 'dataset5', 'dataset7', 'dataset9']
-    dataset_num_list = ['dataset2', 'dataset4', 'dataset6', 'dataset8', 'dataset10']
-    conv_concat = True
-    Analyse(dir_opt).form_weight_edge(RNA_seq_filename, model, dataset_num_list, conv_concat)
+    # ANALYSE DRUG EFFECT
+    print('ANALYSING DRUG EFFECT...')
+    epoch_time = '75'
+    Analyse(dir_opt).plot_train_real_pred(path, epoch_time)
+    Analyse(dir_opt).plot_test_real_pred(path, epoch_time)
+
+    # # REBUILD MODEL AND ANALYSIS PARAMTERS
+    # # IF CHANGE LOADED MODEL, NEED TO CHANGE [.pth / dataset_num_list]
+    # prog_args = arg_parse()
+    # load_model = False
+    # if load_model == True:
+    #     model = build_bigraphsage_model(prog_args)
+    #     model.load_state_dict(torch.load('./datainfo2/result/epoch_75_4d/best_train_model.pth'))
+    # else:
+    #     model = 0
+    # # dataset_num_list = ['dataset1', 'dataset3', 'dataset5', 'dataset7', 'dataset9']
+    # dataset_num_list = ['dataset2', 'dataset4', 'dataset6', 'dataset8', 'dataset10']
+    # conv_concat = True
+    # Analyse(dir_opt).form_weight_edge(RNA_seq_filename, model, dataset_num_list, conv_concat)
