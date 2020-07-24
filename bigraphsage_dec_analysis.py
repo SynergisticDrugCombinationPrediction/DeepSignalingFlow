@@ -39,6 +39,7 @@ class Analyse():
         epoch_loss_array = np.array(epoch_loss_list)
         np.save(path + '/pearson.npy', epoch_pearson_array)
         np.save(path + '/loss.npy', epoch_loss_array)
+        return min_train_id
 
     def plot_loss_pearson(self, path, epoch_num):
         epoch_pearson_array = np.load(path + '/pearson.npy')
@@ -54,10 +55,10 @@ class Analyse():
         plt.plot(x, epoch_pearson_array)
         plt.show()
 
-    def plot_train_real_pred(self, path, epoch_time):
+    def plot_train_real_pred(self, path, best_model_num, epoch_time):
         # ALL POINTS PREDICTION SCATTERPLOT
         dir_opt = self.dir_opt
-        pred_dl_input_df = pd.read_csv(path + '/TrainingPred_75.txt', delimiter = ',')
+        pred_dl_input_df = pd.read_csv(path + '/TrainingPred_' + best_model_num + '.txt', delimiter = ',')
         print(pred_dl_input_df.corr(method = 'pearson'))
         title = 'Scatter Plot After ' + epoch_time + ' Iterations In Training Dataset'
         ax = pred_dl_input_df.plot(x = 'Score', y = 'Pred Score',
@@ -267,17 +268,18 @@ if __name__ == "__main__":
     # BASICAL PARAMETERS IN FILES
     dir_opt = '/datainfo2'
     RNA_seq_filename = 'nci60-ccle_RNAseq_tpm2'
-    path = '.' + dir_opt + '/result/epoch_75_1d'
+    path = '.' + dir_opt + '/result/epoch_75_4d'
 
     # ANALYSE [MSE_LOSS/PEARSON CORRELATION] FROM RECORDED FILES
-    # epoch_num = 75
-    # Analyse(dir_opt).rebuild_loss_pearson(path, epoch_num)
+    epoch_num = 75
+    min_train_id = Analyse(dir_opt).rebuild_loss_pearson(path, epoch_num)
     # Analyse(dir_opt).plot_loss_pearson(path, epoch_num)
 
     # ANALYSE DRUG EFFECT
     print('ANALYSING DRUG EFFECT...')
     epoch_time = '75'
-    Analyse(dir_opt).plot_train_real_pred(path, epoch_time)
+    best_model_num = str(min_train_id)
+    Analyse(dir_opt).plot_train_real_pred(path, best_model_num, epoch_time)
     Analyse(dir_opt).plot_test_real_pred(path, epoch_time)
 
     # # REBUILD MODEL AND ANALYSIS PARAMTERS
