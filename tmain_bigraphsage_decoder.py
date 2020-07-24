@@ -67,7 +67,7 @@ def arg_parse():
                         decoder_dim = 30,
                         num_classes = 1,
                         num_gc_layer = 3,
-                        dropout = 0.01)
+                        dropout = 0.0)
     return parser.parse_args()
 
 # def learning_rate_schedule(args, dl_input_num, iteration_num, e1, e2):
@@ -246,7 +246,7 @@ def test_bigraphsage_model(dataset, model, args):
 def test_bigraphsage(args):
     # BUILD [BiGraphSAGE, DECODER] MODEL
     model = build_bigraphsage_model(args)
-    model.load_state_dict(torch.load('./datainfo2/result/epoch_75_4/best_train_model.pth'))
+    model.load_state_dict(torch.load('./datainfo2/result/epoch_75_0d/best_train_model.pth'))
     # TEST MODEL ON TRAINING DATASET
     dir_opt = '/datainfo2'
     form_data_path = '.' + dir_opt + '/form_data'
@@ -255,7 +255,7 @@ def test_bigraphsage(args):
     dl_input_num = xTe.shape[0]
     batch_size = args.batch_size
     # CLEAN RESULT PREVIOUS EPOCH_I_PRED FILES
-    path = '.' + dir_opt + '/result/epoch_75_4'
+    path = '.' + dir_opt + '/result/epoch_75_0d'
     # RUN TEST MODEL
     model.eval()
     all_ypred = np.zeros((1, 1))
@@ -298,5 +298,5 @@ if __name__ == "__main__":
     # CHECK CUDA GPU DEVICES ON MACHINE
     os.environ['CUDA_VISIBLE_DEVICES'] = prog_args.cuda
     print('CUDA', prog_args.cuda)
-    train_bigraphsage(prog_args)
+    # train_bigraphsage(prog_args)
     test_bigraphsage(prog_args)
