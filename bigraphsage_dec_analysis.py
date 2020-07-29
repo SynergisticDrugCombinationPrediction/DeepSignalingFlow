@@ -326,7 +326,7 @@ class Analyse():
         print(gene_weight_bind_degree_df)
         gene_weight_bind_degree_df.to_csv('.' + dir_opt + '/bianalyse_data/gene_weight_bind_degree.csv', index = False, header = True)
 
-    def filter_edge(self):
+    def filter_edge(self, edge_threshold):
         dir_opt = self.dir_opt
         gene_up_weight_edge_df = pd.read_csv('.' + dir_opt + '/bianalyse_data/gene_up_weight_edge.csv')
         gene_down_weight_edge_df = pd.read_csv('.' + dir_opt + '/bianalyse_data/gene_down_weight_edge.csv')
@@ -336,24 +336,24 @@ class Analyse():
         bind_deletion_list = []
         # DELETE UP EDGES SMALLER THAN CERTAIN THRESHOLD
         for up_row in gene_up_weight_edge_df.itertuples():
-            if list(up_row[5:])[0] < 0.5 :
+            if list(up_row[5:])[0] < edge_threshold :
                 up_deletion_list.append(up_row[0])
         edgefilter_gene_up_weight_edge_df = gene_up_weight_edge_df.drop(gene_up_weight_edge_df.index[up_deletion_list]).reset_index(drop = True)     
         edgefilter_gene_up_weight_edge_df.to_csv('.' + dir_opt + '/bianalyse_data/edgefilter_gene_up_weight_edge.csv', index = False, header = True)
         # DELETE DOWN EDGES SMALLER THAN CERTAIN THRESHOLD
         for down_row in gene_up_weight_edge_df.itertuples():
-            if list(down_row[5:])[0] < 0.5 :
+            if list(down_row[5:])[0] < edge_threshold :
                 down_deletion_list.append(down_row[0])
         edgefilter_gene_down_weight_edge_df = gene_down_weight_edge_df.drop(gene_down_weight_edge_df.index[down_deletion_list]).reset_index(drop = True)     
         edgefilter_gene_down_weight_edge_df.to_csv('.' + dir_opt + '/bianalyse_data/edgefilter_gene_down_weight_edge.csv', index = False, header = True)
         # DELETE BIND EDGES SMALLER THAN CERTAIN THRESHOLD
         for bind_row in gene_bind_weight_edge_df.itertuples():
-            if list(bind_row[5:])[0] < 0.5 :
+            if list(bind_row[5:])[0] < edge_threshold :
                 bind_deletion_list.append(bind_row[0])
         edgefilter_gene_bind_weight_edge_df = gene_bind_weight_edge_df.drop(gene_bind_weight_edge_df.index[bind_deletion_list]).reset_index(drop = True)     
         edgefilter_gene_bind_weight_edge_df.to_csv('.' + dir_opt + '/bianalyse_data/edgefilter_gene_bind_weight_edge.csv', index = False, header = True)
 
-    def filter_gene(self):
+    def filter_gene(self, degree_threshold):
         dir_opt = self.dir_opt
         # UP DEGREE AND EDGE
         gene_weight_up_degree_df = pd.read_csv('.' + dir_opt + '/bianalyse_data/gene_weight_up_degree.csv')
@@ -373,7 +373,7 @@ class Analyse():
         bind_num_deletion_list = []
         # DELETE UP EDGES SMALLER THAN CERTAIN THRESHOLD
         for up_row in gene_weight_up_degree_df.itertuples():
-            if list(up_row[5:])[0] < 10 :
+            if list(up_row[5:])[0] < degree_threshold :
                 up_deletion_list.append(up_row[0])
                 up_num_deletion_list.append(up_row[1:][0])
         gene_weight_up_degree_df = gene_weight_up_degree_df.drop(gene_weight_up_degree_df.index[up_deletion_list]).reset_index(drop = True)     
@@ -385,7 +385,7 @@ class Analyse():
         nodefilter_gene_up_weight_edge_df.to_csv('.' + dir_opt + '/bianalyse_data/nodefilter_gene_up_weight_edge.csv', index = False, header = True)
         # DELETE DOWN EDGES SMALLER THAN CERTAIN THRESHOLD
         for down_row in gene_weight_down_degree_df.itertuples():
-            if list(down_row[5:])[0] < 10 :
+            if list(down_row[5:])[0] < degree_threshold :
                 down_deletion_list.append(down_row[0])
                 down_num_deletion_list.append(down_row[1:][0])
         gene_weight_down_degree_df = gene_weight_down_degree_df.drop(gene_weight_down_degree_df.index[down_deletion_list]).reset_index(drop = True)     
@@ -397,7 +397,7 @@ class Analyse():
         nodefilter_gene_down_weight_edge_df.to_csv('.' + dir_opt + '/bianalyse_data/nodefilter_gene_down_weight_edge.csv', index = False, header = True)
         # DELETE BIND EDGES SMALLER THAN CERTAIN THRESHOLD
         for bind_row in gene_weight_bind_degree_df.itertuples():
-            if list(bind_row[5:])[0] < 10 :
+            if list(bind_row[5:])[0] < degree_threshold :
                 bind_deletion_list.append(bind_row[0])
                 bind_num_deletion_list.append(bind_row[1:][0])
         gene_weight_bind_degree_df = gene_weight_bind_degree_df.drop(gene_weight_bind_degree_df.index[bind_deletion_list]).reset_index(drop = True)     
@@ -445,5 +445,7 @@ if __name__ == "__main__":
     Analyse(dir_opt).form_node_degree(conv_up_weight_adj_bind, conv_down_weight_adj_bind, conv_mean_weight_adj_bind)
 
     # FILTER EDGES OR NODES
-    Analyse(dir_opt).filter_edge()
-    Analyse(dir_opt).filter_gene()
+    edge_threshold = 0.5
+    Analyse(dir_opt).filter_edge(edge_threshold)
+    degree_threshold = 10
+    Analyse(dir_opt).filter_gene(degree_threshold)
