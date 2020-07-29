@@ -311,18 +311,21 @@ class Analyse():
         weight_up_gene_degree = {'gene_idx': gene_list, 'gene_name': gene_name_list, 'out_degree': gene_up_outdeg_list,\
                         'in_degree': gene_up_indeg_list, 'degree': gene_up_degree_list}
         gene_weight_up_degree_df = pd.DataFrame(weight_up_gene_degree)
+        print('\n-------- UPSTREAM DEGREE --------')
         print(gene_weight_up_degree_df)
         gene_weight_up_degree_df.to_csv('.' + dir_opt + '/bianalyse_data/gene_weight_up_degree.csv', index = False, header = True)
         # ######## DOWN DATAFRAME ########
         weight_down_gene_degree = {'gene_idx': gene_list, 'gene_name': gene_name_list, 'out_degree': gene_down_outdeg_list,\
                         'in_degree': gene_down_indeg_list, 'degree': gene_down_degree_list}
         gene_weight_down_degree_df = pd.DataFrame(weight_down_gene_degree)
+        print('\n-------- DOWNSTREAM DEGREE --------')
         print(gene_weight_down_degree_df)
         gene_weight_down_degree_df.to_csv('.' + dir_opt + '/bianalyse_data/gene_weight_down_degree.csv', index = False, header = True)
         # ######## BIND DATAFRAME ########
         weight_bind_gene_degree = {'gene_idx': gene_list, 'gene_name': gene_name_list, 'out_degree': gene_bind_outdeg_list,\
                         'in_degree': gene_bind_indeg_list, 'degree': gene_bind_degree_list}
         gene_weight_bind_degree_df = pd.DataFrame(weight_bind_gene_degree)
+        print('\n-------- BINDSTREAM DEGREE --------')
         print(gene_weight_bind_degree_df)
         gene_weight_bind_degree_df.to_csv('.' + dir_opt + '/bianalyse_data/gene_weight_bind_degree.csv', index = False, header = True)
 
@@ -377,7 +380,7 @@ class Analyse():
                 up_deletion_list.append(up_row[0])
                 up_num_deletion_list.append(up_row[1:][0])
         gene_weight_up_degree_df = gene_weight_up_degree_df.drop(gene_weight_up_degree_df.index[up_deletion_list]).reset_index(drop = True)     
-        print(gene_weight_up_degree_df)
+        # print(gene_weight_up_degree_df)
         for up_row in gene_up_weight_edge_df.itertuples(): 
             if list(up_row[1:])[0] in up_num_deletion_list or list(up_row[3:])[0] in up_num_deletion_list:
                 up_deletion_list.append(up_row[0])
@@ -389,7 +392,7 @@ class Analyse():
                 down_deletion_list.append(down_row[0])
                 down_num_deletion_list.append(down_row[1:][0])
         gene_weight_down_degree_df = gene_weight_down_degree_df.drop(gene_weight_down_degree_df.index[down_deletion_list]).reset_index(drop = True)     
-        print(gene_weight_down_degree_df)
+        # print(gene_weight_down_degree_df)
         for down_row in gene_down_weight_edge_df.itertuples(): 
             if list(down_row[1:])[0] in down_num_deletion_list or list(down_row[3:])[0] in down_num_deletion_list:
                 down_deletion_list.append(down_row[0])
@@ -401,7 +404,7 @@ class Analyse():
                 bind_deletion_list.append(bind_row[0])
                 bind_num_deletion_list.append(bind_row[1:][0])
         gene_weight_bind_degree_df = gene_weight_bind_degree_df.drop(gene_weight_bind_degree_df.index[bind_deletion_list]).reset_index(drop = True)     
-        print(gene_weight_bind_degree_df)
+        # print(gene_weight_bind_degree_df)
         for bind_row in gene_bind_weight_edge_df.itertuples(): 
             if list(bind_row[1:])[0] in bind_num_deletion_list or list(bind_row[3:])[0] in bind_num_deletion_list:
                 bind_deletion_list.append(bind_row[0])
