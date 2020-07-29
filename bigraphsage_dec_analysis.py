@@ -261,8 +261,76 @@ class Analyse():
         print('\n--------BIND-STREAM GENE EDGES WEIGHT--------')
         print(gene_bind_weight_edge_df)
         gene_bind_weight_edge_df.to_csv('.' + dir_opt + '/bianalyse_data/gene_bind_weight_edge.csv', index = False, header = True)
+        return conv_up_weight_adj_bind, conv_down_weight_adj_bind, conv_mean_weight_adj_bind
 
+    def form_node_degree(self, conv_up_weight_adj_bind, conv_down_weight_adj_bind, conv_mean_weight_adj_bind):
+        dir_opt = self.dir_opt
+        # FORM [cellline_gene_dict] TO MAP GENES WITH INDEX NUM !!! START FROM 1
+        cellline_gene_df = pd.read_csv('.' + dir_opt + '/filtered_data/' + RNA_seq_filename + '.csv')
+        cellline_gene_list = list(cellline_gene_df['geneSymbol'])
+        cellline_gene_num_dict = {i : cellline_gene_list[i - 1] for i in range(1, len(cellline_gene_list) + 1)}
+        num_gene = len(cellline_gene_df)
+        num_node = num_gene + 2
+        # CONVERT ADJACENT MATRICES WITH GENE OUT/IN DEGREE
+        gene_list = []
+        gene_name_list = []
+        gene_up_outdeg_list = []
+        gene_up_indeg_list = []
+        gene_up_degree_list = []
+        gene_down_outdeg_list = []
+        gene_down_indeg_list = []
+        gene_down_degree_list = []
+        gene_bind_outdeg_list = []
+        gene_bind_indeg_list = []
+        gene_bind_degree_list = []
+        for idx in range(num_gene):
+            gene_list.append(idx + 1)
+            gene_name_list.append(cellline_gene_num_dict[idx + 1])
+            # ######## OUT DEGREE ########
+            gene_up_outdeg = np.sum(conv_up_weight_adj_bind[idx, :])
+            gene_up_outdeg_list.append(gene_up_outdeg)
+            gene_down_outdeg = np.sum(conv_down_weight_adj_bind[idx, :])
+            gene_down_outdeg_list.append(gene_down_outdeg)
+            gene_bind_outdeg = np.sum(conv_mean_weight_adj_bind[idx, :])
+            gene_bind_outdeg_list.append(gene_bind_outdeg)
+            # ######## IN DEGREE ########
+            gene_up_indeg = np.sum(conv_up_weight_adj_bind[:, idx])
+            gene_up_indeg_list.append(gene_up_indeg)
+            gene_down_indeg = np.sum(conv_down_weight_adj_bind[:, idx])
+            gene_down_indeg_list.append(gene_down_indeg)
+            gene_bind_indeg = np.sum(conv_mean_weight_adj_bind[:, idx])
+            gene_bind_indeg_list.append(gene_bind_indeg)
+            # ######## DEGREE ########
+            gene_up_degree = gene_up_outdeg + gene_up_indeg
+            gene_down_degree = gene_down_outdeg + gene_down_indeg
+            gene_bind_degree = gene_bind_outdeg + gene_bind_indeg
+            gene_up_degree_list.append(gene_up_degree)
+            gene_down_degree_list.append(gene_down_degree)
+            gene_bind_degree_list.append(gene_bind_degree)
+        # ######## UP DATAFRAME ########
+        weight_up_gene_degree = {'gene_idx': gene_list, 'gene_name': gene_name_list, 'out_degree': gene_up_outdeg_list,\
+                        'in_degree': gene_up_indeg_list, 'degree': gene_up_degree_list}
+        gene_weight_up_degree_df = pd.DataFrame(weight_up_gene_degree)
+        print(gene_weight_up_degree_df)
+        gene_weight_up_degree_df.to_csv('.' + dir_opt + '/bianalyse_data/gene_weight_up_degree.csv', index = False, header = True)
+        # ######## DOWN DATAFRAME ########
+        weight_down_gene_degree = {'gene_idx': gene_list, 'gene_name': gene_name_list, 'out_degree': gene_down_outdeg_list,\
+                        'in_degree': gene_down_indeg_list, 'degree': gene_down_degree_list}
+        gene_weight_down_degree_df = pd.DataFrame(weight_down_gene_degree)
+        print(gene_weight_down_degree_df)
+        gene_weight_down_degree_df.to_csv('.' + dir_opt + '/bianalyse_data/gene_weight_down_degree.csv', index = False, header = True)
+        # ######## BIND DATAFRAME ########
+        weight_bind_gene_degree = {'gene_idx': gene_list, 'gene_name': gene_name_list, 'out_degree': gene_bind_outdeg_list,\
+                        'in_degree': gene_bind_indeg_list, 'degree': gene_bind_degree_list}
+        gene_weight_bind_degree_df = pd.DataFrame(weight_bind_gene_degree)
+        print(gene_weight_bind_degree_df)
+        gene_weight_bind_degree_df.to_csv('.' + dir_opt + '/bianalyse_data/gene_weight_bind_degree.csv', index = False, header = True)
 
+    def filter_edge(self):
+        dir_opt = self.dir_opt
+        gene_up_weight_edge_df = pd.read_csv('.' + dir_opt + '/bianalyse_data/gene_up_weight_edge.csv')
+        print(gene_up_weight_edge_df)
+    # def filter_gene(self, ):
 
 if __name__ == "__main__":
     # BASICAL PARAMETERS IN FILES
@@ -270,28 +338,33 @@ if __name__ == "__main__":
     RNA_seq_filename = 'nci60-ccle_RNAseq_tpm2'
     path = '.' + dir_opt + '/result/epoch_75_4d'
 
-    # ANALYSE [MSE_LOSS/PEARSON CORRELATION] FROM RECORDED FILES
-    epoch_num = 75
-    min_train_id = Analyse(dir_opt).rebuild_loss_pearson(path, epoch_num)
+    # # ANALYSE [MSE_LOSS/PEARSON CORRELATION] FROM RECORDED FILES
+    # epoch_num = 75
+    # min_train_id = Analyse(dir_opt).rebuild_loss_pearson(path, epoch_num)
     # Analyse(dir_opt).plot_loss_pearson(path, epoch_num)
 
-    # ANALYSE DRUG EFFECT
-    print('ANALYSING DRUG EFFECT...')
-    epoch_time = '75'
-    best_model_num = str(min_train_id)
-    Analyse(dir_opt).plot_train_real_pred(path, best_model_num, epoch_time)
-    Analyse(dir_opt).plot_test_real_pred(path, epoch_time)
+    # # ANALYSE DRUG EFFECT
+    # print('ANALYSING DRUG EFFECT...')
+    # epoch_time = '75'
+    # best_model_num = str(min_train_id)
+    # Analyse(dir_opt).plot_train_real_pred(path, best_model_num, epoch_time)
+    # Analyse(dir_opt).plot_test_real_pred(path, epoch_time)
 
-    # # REBUILD MODEL AND ANALYSIS PARAMTERS
-    # # IF CHANGE LOADED MODEL, NEED TO CHANGE [.pth / dataset_num_list]
-    # prog_args = arg_parse()
-    # load_model = False
-    # if load_model == True:
-    #     model = build_bigraphsage_model(prog_args)
-    #     model.load_state_dict(torch.load('./datainfo2/result/epoch_75_4d/best_train_model.pth'))
-    # else:
-    #     model = 0
-    # # dataset_num_list = ['dataset1', 'dataset3', 'dataset5', 'dataset7', 'dataset9']
-    # dataset_num_list = ['dataset2', 'dataset4', 'dataset6', 'dataset8', 'dataset10']
-    # conv_concat = True
-    # Analyse(dir_opt).form_weight_edge(RNA_seq_filename, model, dataset_num_list, conv_concat)
+    # REBUILD MODEL AND ANALYSIS PARAMTERS
+    # IF CHANGE LOADED MODEL, NEED TO CHANGE [.pth / dataset_num_list]
+    prog_args = arg_parse()
+    load_model = False
+    if load_model == True:
+        model = build_bigraphsage_model(prog_args)
+        model.load_state_dict(torch.load('./datainfo2/result/epoch_75_4d/best_train_model.pth'))
+    else:
+        model = 0
+    # dataset_num_list = ['dataset1', 'dataset3', 'dataset5', 'dataset7', 'dataset9']
+    dataset_num_list = ['dataset2', 'dataset4', 'dataset6', 'dataset8', 'dataset10']
+    conv_concat = True
+    conv_up_weight_adj_bind, conv_down_weight_adj_bind, conv_mean_weight_adj_bind = \
+        Analyse(dir_opt).form_weight_edge(RNA_seq_filename, model, dataset_num_list, conv_concat)
+    Analyse(dir_opt).form_node_degree(conv_up_weight_adj_bind, conv_down_weight_adj_bind, conv_mean_weight_adj_bind)
+
+    # FILTER EDGES OR NODES
+    Analyse(dir_opt).filter_edge()
