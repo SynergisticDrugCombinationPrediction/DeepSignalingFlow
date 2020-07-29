@@ -329,8 +329,86 @@ class Analyse():
     def filter_edge(self):
         dir_opt = self.dir_opt
         gene_up_weight_edge_df = pd.read_csv('.' + dir_opt + '/bianalyse_data/gene_up_weight_edge.csv')
-        print(gene_up_weight_edge_df)
-    # def filter_gene(self, ):
+        gene_down_weight_edge_df = pd.read_csv('.' + dir_opt + '/bianalyse_data/gene_down_weight_edge.csv')
+        gene_bind_weight_edge_df = pd.read_csv('.' + dir_opt + '/bianalyse_data/gene_bind_weight_edge.csv')
+        up_deletion_list = []
+        down_deletion_list = []
+        bind_deletion_list = []
+        # DELETE UP EDGES SMALLER THAN CERTAIN THRESHOLD
+        for up_row in gene_up_weight_edge_df.itertuples():
+            if list(up_row[5:])[0] < 0.5 :
+                up_deletion_list.append(up_row[0])
+        edgefilter_gene_up_weight_edge_df = gene_up_weight_edge_df.drop(gene_up_weight_edge_df.index[up_deletion_list]).reset_index(drop = True)     
+        edgefilter_gene_up_weight_edge_df.to_csv('.' + dir_opt + '/bianalyse_data/edgefilter_gene_up_weight_edge.csv', index = False, header = True)
+        # DELETE DOWN EDGES SMALLER THAN CERTAIN THRESHOLD
+        for down_row in gene_up_weight_edge_df.itertuples():
+            if list(down_row[5:])[0] < 0.5 :
+                down_deletion_list.append(down_row[0])
+        edgefilter_gene_down_weight_edge_df = gene_down_weight_edge_df.drop(gene_down_weight_edge_df.index[down_deletion_list]).reset_index(drop = True)     
+        edgefilter_gene_down_weight_edge_df.to_csv('.' + dir_opt + '/bianalyse_data/edgefilter_gene_down_weight_edge.csv', index = False, header = True)
+        # DELETE BIND EDGES SMALLER THAN CERTAIN THRESHOLD
+        for bind_row in gene_bind_weight_edge_df.itertuples():
+            if list(bind_row[5:])[0] < 0.5 :
+                bind_deletion_list.append(bind_row[0])
+        edgefilter_gene_bind_weight_edge_df = gene_bind_weight_edge_df.drop(gene_bind_weight_edge_df.index[bind_deletion_list]).reset_index(drop = True)     
+        edgefilter_gene_bind_weight_edge_df.to_csv('.' + dir_opt + '/bianalyse_data/edgefilter_gene_bind_weight_edge.csv', index = False, header = True)
+
+    def filter_gene(self):
+        dir_opt = self.dir_opt
+        # UP DEGREE AND EDGE
+        gene_weight_up_degree_df = pd.read_csv('.' + dir_opt + '/bianalyse_data/gene_weight_up_degree.csv')
+        gene_up_weight_edge_df = pd.read_csv('.' + dir_opt + '/bianalyse_data/gene_up_weight_edge.csv')
+        # DOWN DEGREE AND EDGE
+        gene_weight_down_degree_df = pd.read_csv('.' + dir_opt + '/bianalyse_data/gene_weight_down_degree.csv')
+        gene_down_weight_edge_df = pd.read_csv('.' + dir_opt + '/bianalyse_data/gene_down_weight_edge.csv')
+        # BIND DEGREE AND EDGE
+        gene_weight_bind_degree_df = pd.read_csv('.' + dir_opt + '/bianalyse_data/gene_weight_bind_degree.csv')
+        gene_bind_weight_edge_df = pd.read_csv('.' + dir_opt + '/bianalyse_data/gene_bind_weight_edge.csv')
+        # FILTER SMALL DEGREE NODES
+        up_deletion_list = []
+        up_num_deletion_list = []
+        down_deletion_list = []
+        down_num_deletion_list = []
+        bind_deletion_list = []
+        bind_num_deletion_list = []
+        # DELETE UP EDGES SMALLER THAN CERTAIN THRESHOLD
+        for up_row in gene_weight_up_degree_df.itertuples():
+            if list(up_row[5:])[0] < 10 :
+                up_deletion_list.append(up_row[0])
+                up_num_deletion_list.append(up_row[1:][0])
+        gene_weight_up_degree_df = gene_weight_up_degree_df.drop(gene_weight_up_degree_df.index[up_deletion_list]).reset_index(drop = True)     
+        print(gene_weight_up_degree_df)
+        for up_row in gene_up_weight_edge_df.itertuples(): 
+            if list(up_row[1:])[0] in up_num_deletion_list or list(up_row[3:])[0] in up_num_deletion_list:
+                up_deletion_list.append(up_row[0])
+        nodefilter_gene_up_weight_edge_df = gene_up_weight_edge_df.drop(gene_up_weight_edge_df.index[up_deletion_list]).reset_index(drop = True)     
+        nodefilter_gene_up_weight_edge_df.to_csv('.' + dir_opt + '/bianalyse_data/nodefilter_gene_up_weight_edge.csv', index = False, header = True)
+        # DELETE DOWN EDGES SMALLER THAN CERTAIN THRESHOLD
+        for down_row in gene_weight_down_degree_df.itertuples():
+            if list(down_row[5:])[0] < 10 :
+                down_deletion_list.append(down_row[0])
+                down_num_deletion_list.append(down_row[1:][0])
+        gene_weight_down_degree_df = gene_weight_down_degree_df.drop(gene_weight_down_degree_df.index[down_deletion_list]).reset_index(drop = True)     
+        print(gene_weight_down_degree_df)
+        for down_row in gene_down_weight_edge_df.itertuples(): 
+            if list(down_row[1:])[0] in down_num_deletion_list or list(down_row[3:])[0] in down_num_deletion_list:
+                down_deletion_list.append(down_row[0])
+        nodefilter_gene_down_weight_edge_df = gene_down_weight_edge_df.drop(gene_down_weight_edge_df.index[down_deletion_list]).reset_index(drop = True)     
+        nodefilter_gene_down_weight_edge_df.to_csv('.' + dir_opt + '/bianalyse_data/nodefilter_gene_down_weight_edge.csv', index = False, header = True)
+        # DELETE BIND EDGES SMALLER THAN CERTAIN THRESHOLD
+        for bind_row in gene_weight_bind_degree_df.itertuples():
+            if list(bind_row[5:])[0] < 10 :
+                bind_deletion_list.append(bind_row[0])
+                bind_num_deletion_list.append(bind_row[1:][0])
+        gene_weight_bind_degree_df = gene_weight_bind_degree_df.drop(gene_weight_bind_degree_df.index[bind_deletion_list]).reset_index(drop = True)     
+        print(gene_weight_bind_degree_df)
+        for bind_row in gene_bind_weight_edge_df.itertuples(): 
+            if list(bind_row[1:])[0] in bind_num_deletion_list or list(bind_row[3:])[0] in bind_num_deletion_list:
+                bind_deletion_list.append(bind_row[0])
+        nodefilter_gene_bind_weight_edge_df = gene_bind_weight_edge_df.drop(gene_bind_weight_edge_df.index[bind_deletion_list]).reset_index(drop = True)     
+        nodefilter_gene_bind_weight_edge_df.to_csv('.' + dir_opt + '/bianalyse_data/nodefilter_gene_bind_weight_edge.csv', index = False, header = True)
+
+
 
 if __name__ == "__main__":
     # BASICAL PARAMETERS IN FILES
@@ -368,3 +446,4 @@ if __name__ == "__main__":
 
     # FILTER EDGES OR NODES
     Analyse(dir_opt).filter_edge()
+    Analyse(dir_opt).filter_gene()
