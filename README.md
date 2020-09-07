@@ -17,7 +17,7 @@ Finally, those datasets files will be parsed into numpy files to train our DeepS
 python3 parse_file.py
 ```
 
-## 2. Train Graph Bidirectional Convolutional Network (GBCN) by Running Code
+## 2. Train Graph Bidirectional Convolutional Network (GBCN)
 GBCN add weight on bidirectional adjacent matrices and predict synergistic drug scores thorugh decoder.
 ```
 python3 tmain_bigraphsage_decoder.py
