@@ -1,4 +1,5 @@
 # DeepSignalingFlow
+
 Complex signaling pathways/networks are believed to be responsible for drug resistance in cancer therapy. And there are 2 challenges always being an open problem for effective drug combination prediction. First, the complex and biological meaningful gene regulatory relationships were not incorporated, and thus were not interpretable. Second, no model was designed to investigate complex mechanism of synergy (MoS). In this study, we proposed a novel computational model, DeepSignalingFlow, to investigate these 2 challenges. Specifically, a graph convolutional network (GCN) was built on a core cancer signaling network that consists of 1634 genes, with gene expression data, from 46 core cancer signaling pathways. Then the up-stream signaling-flow (from up-stream signaling to drug targets), and the down-stream signaling-flow (from drug targets to down-stream signaling) were mimicked by the trainable weights of network edges.  
 
 <!-- For more details of DeepSignalingFlow, see our [bioRxiv paper]() -->
