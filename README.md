@@ -41,3 +41,7 @@ tmain_gat_decoder.py
 # GraphSAGE + LSTM + decoder
 tmain_graphsage_lstm_decoder.py
 ```
+
+## 3. Copyright
+
+The copyright of the code in this project reserves to the authors. If you want to use the code, please contact me first. My email address: hemingzhang@wustl.edu
