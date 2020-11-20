@@ -298,5 +298,5 @@ if __name__ == "__main__":
     # CHECK CUDA GPU DEVICES ON MACHINE
     os.environ['CUDA_VISIBLE_DEVICES'] = prog_args.cuda
     print('CUDA', prog_args.cuda)
-    # train_bigraphsage(prog_args)
-    test_bigraphsage(prog_args)
+    train_bigraphsage(prog_args)
+    # test_bigraphsage(prog_args)
